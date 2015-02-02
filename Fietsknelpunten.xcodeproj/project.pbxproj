@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA1505E71A80115400058046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1505E61A80115400058046 /* main.m */; };
+		CA1505EA1A80115400058046 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1505E91A80115400058046 /* AppDelegate.m */; };
+		CA1505ED1A80115400058046 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1505EC1A80115400058046 /* ViewController.m */; };
+		CA1505F21A80115400058046 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1505F11A80115400058046 /* Images.xcassets */; };
+		CA1505F51A80115400058046 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1505F31A80115400058046 /* LaunchScreen.xib */; };
+		CA1506011A80115400058046 /* FietsknelpuntenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1506001A80115400058046 /* FietsknelpuntenTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA1505FB1A80115400058046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA1505D91A80115300058046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1505E01A80115400058046;
+			remoteInfo = Fietsknelpunten;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1505E51A80115400058046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1505E61A80115400058046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA1505E81A80115400058046 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA1505E91A80115400058046 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CA1505EB1A80115400058046 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CA1505EC1A80115400058046 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CA1505F11A80115400058046 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA1505F41A80115400058046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CA1505FA1A80115400058046 /* FietsknelpuntenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FietsknelpuntenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1505FF1A80115400058046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1506001A80115400058046 /* FietsknelpuntenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FietsknelpuntenTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA1505DE1A80115400058046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1505F71A80115400058046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA1505D81A80115300058046 = {
+			isa = PBXGroup;
+			children = (
+				CA1505E31A80115400058046 /* Fietsknelpunten */,
+				CA1505FD1A80115400058046 /* FietsknelpuntenTests */,
+				CA1505E21A80115400058046 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA1505E21A80115400058046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA1505E11A80115400058046 /* Fietsknelpunten.app */,
+				CA1505FA1A80115400058046 /* FietsknelpuntenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA1505E31A80115400058046 /* Fietsknelpunten */ = {
+			isa = PBXGroup;
+			children = (
+				CA1505E81A80115400058046 /* AppDelegate.h */,
+				CA1505E91A80115400058046 /* AppDelegate.m */,
+				CA1505EB1A80115400058046 /* ViewController.h */,
+				CA1505EC1A80115400058046 /* ViewController.m */,
+				CA1505F11A80115400058046 /* Images.xcassets */,
+				CA1505F31A80115400058046 /* LaunchScreen.xib */,
+				CA1505E41A80115400058046 /* Supporting Files */,
+			);
+			path = Fietsknelpunten;
+			sourceTree = "<group>";
+		};
+		CA1505E41A80115400058046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA1505E51A80115400058046 /* Info.plist */,
+				CA1505E61A80115400058046 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA1505FD1A80115400058046 /* FietsknelpuntenTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA1506001A80115400058046 /* FietsknelpuntenTests.m */,
+				CA1505FE1A80115400058046 /* Supporting Files */,
+			);
+			path = FietsknelpuntenTests;
+			sourceTree = "<group>";
+		};
+		CA1505FE1A80115400058046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA1505FF1A80115400058046 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA1505E01A80115400058046 /* Fietsknelpunten */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "Fietsknelpunten" */;
+			buildPhases = (
+				CA1505DD1A80115400058046 /* Sources */,
+				CA1505DE1A80115400058046 /* Frameworks */,
+				CA1505DF1A80115400058046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fietsknelpunten;
+			productName = Fietsknelpunten;
+			productReference = CA1505E11A80115400058046 /* Fietsknelpunten.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA1505F91A80115400058046 /* FietsknelpuntenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1506071A80115400058046 /* Build configuration list for PBXNativeTarget "FietsknelpuntenTests" */;
+			buildPhases = (
+				CA1505F61A80115400058046 /* Sources */,
+				CA1505F71A80115400058046 /* Frameworks */,
+				CA1505F81A80115400058046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA1505FC1A80115400058046 /* PBXTargetDependency */,
+			);
+			name = FietsknelpuntenTests;
+			productName = FietsknelpuntenTests;
+			productReference = CA1505FA1A80115400058046 /* FietsknelpuntenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA1505D91A80115300058046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Fietsknelpunten;
+				TargetAttributes = {
+					CA1505E01A80115400058046 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CA1505F91A80115400058046 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CA1505E01A80115400058046;
+					};
+				};
+			};
+			buildConfigurationList = CA1505DC1A80115300058046 /* Build configuration list for PBXProject "Fietsknelpunten" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA1505D81A80115300058046;
+			productRefGroup = CA1505E21A80115400058046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA1505E01A80115400058046 /* Fietsknelpunten */,
+				CA1505F91A80115400058046 /* FietsknelpuntenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA1505DF1A80115400058046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1505F51A80115400058046 /* LaunchScreen.xib in Resources */,
+				CA1505F21A80115400058046 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1505F81A80115400058046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA1505DD1A80115400058046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1505ED1A80115400058046 /* ViewController.m in Sources */,
+				CA1505EA1A80115400058046 /* AppDelegate.m in Sources */,
+				CA1505E71A80115400058046 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1505F61A80115400058046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1506011A80115400058046 /* FietsknelpuntenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA1505FC1A80115400058046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1505E01A80115400058046 /* Fietsknelpunten */;
+			targetProxy = CA1505FB1A80115400058046 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA1505F31A80115400058046 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA1505F41A80115400058046 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA1506021A80115400058046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CA1506031A80115400058046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA1506051A80115400058046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fietsknelpunten/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CA1506061A80115400058046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fietsknelpunten/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CA1506081A80115400058046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FietsknelpuntenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fietsknelpunten.app/Fietsknelpunten";
+			};
+			name = Debug;
+		};
+		CA1506091A80115400058046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FietsknelpuntenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fietsknelpunten.app/Fietsknelpunten";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA1505DC1A80115300058046 /* Build configuration list for PBXProject "Fietsknelpunten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1506021A80115400058046 /* Debug */,
+				CA1506031A80115400058046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "Fietsknelpunten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1506051A80115400058046 /* Debug */,
+				CA1506061A80115400058046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1506071A80115400058046 /* Build configuration list for PBXNativeTarget "FietsknelpuntenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1506081A80115400058046 /* Debug */,
+				CA1506091A80115400058046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA1505D91A80115300058046 /* Project object */;
+}
