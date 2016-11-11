@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF6E9E85DBCE64919937A1E /* Pods_App.framework */; };
 		CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */; };
 		CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */; };
 		CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		7FF6E9E85DBCE64919937A1E /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA4FDC0D1DD5C28F00F7BF9F /* Fietsknelpunten-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fietsknelpunten-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -30,17 +34,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A84A4567A84FC4CAFC0C232 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FF6E9E85DBCE64919937A1E /* Pods_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A4690D293CA8B584418F913 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */,
+				523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA1505D81A80115300058046 = {
 			isa = PBXGroup;
 			children = (
 				CA4FDC0B1DD5C28F00F7BF9F /* App */,
 				CA1505E21A80115400058046 /* Products */,
+				8A4690D293CA8B584418F913 /* Pods */,
+				5A84A4567A84FC4CAFC0C232 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
+				3EC0D0959E80DFDF42EF272D /* [CP] Check Pods Manifest.lock */,
 				CA1505DD1A80115400058046 /* Sources */,
 				CA1505DE1A80115400058046 /* Frameworks */,
 				CA1505DF1A80115400058046 /* Resources */,
+				F881F2A7C88D0233C2065FF9 /* [CP] Embed Pods Frameworks */,
+				539F7AD207BF2728E2EE5A92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EC0D0959E80DFDF42EF272D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		539F7AD207BF2728E2EE5A92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App/Pods-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F881F2A7C88D0233C2065FF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App/Pods-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA1505DD1A80115400058046 /* Sources */ = {
@@ -250,6 +325,7 @@
 		};
 		CA1506051A80115400058046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -264,6 +340,7 @@
 		};
 		CA1506061A80115400058046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
