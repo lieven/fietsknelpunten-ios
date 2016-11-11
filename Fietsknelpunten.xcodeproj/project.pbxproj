@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1505E11A80115400058046 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1505E51A80115400058046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1505E61A80115400058046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA1505F11A80115400058046 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		CA1505E21A80115400058046 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA1505E11A80115400058046 /* Fietsknelpunten.app */,
+				CA1505E11A80115400058046 /* App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,9 +77,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CA1505E01A80115400058046 /* Fietsknelpunten */ = {
+		CA1505E01A80115400058046 /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "Fietsknelpunten" */;
+			buildConfigurationList = CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				CA1505DD1A80115400058046 /* Sources */,
 				CA1505DE1A80115400058046 /* Frameworks */,
@@ -89,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = Fietsknelpunten;
+			name = App;
 			productName = Fietsknelpunten;
-			productReference = CA1505E11A80115400058046 /* Fietsknelpunten.app */;
+			productReference = CA1505E11A80115400058046 /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA1505E01A80115400058046 /* Fietsknelpunten */,
+				CA1505E01A80115400058046 /* App */,
 			);
 		};
 /* End PBXProject section */
@@ -279,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "Fietsknelpunten" */ = {
+		CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA1506051A80115400058046 /* Debug */,
