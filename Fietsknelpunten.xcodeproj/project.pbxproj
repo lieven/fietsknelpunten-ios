@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CA1505E71A80115400058046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1505E61A80115400058046 /* main.m */; };
-		CA1505EA1A80115400058046 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1505E91A80115400058046 /* AppDelegate.m */; };
-		CA1505ED1A80115400058046 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1505EC1A80115400058046 /* ViewController.m */; };
 		CA1505F21A80115400058046 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1505F11A80115400058046 /* Images.xcassets */; };
 		CA1505F51A80115400058046 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1505F31A80115400058046 /* LaunchScreen.xib */; };
 		CA1506011A80115400058046 /* FietsknelpuntenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1506001A80115400058046 /* FietsknelpuntenTests.m */; };
+		CA4FDC081DD5BC6A00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC071DD5BC6A00F7BF9F /* AppDelegate.swift */; };
+		CA4FDC0A1DD5BCFB00F7BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC091DD5BCFB00F7BF9F /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +29,14 @@
 		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1505E51A80115400058046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1505E61A80115400058046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CA1505E81A80115400058046 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CA1505E91A80115400058046 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA1505EB1A80115400058046 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CA1505EC1A80115400058046 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CA1505F11A80115400058046 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA1505F41A80115400058046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA1505FA1A80115400058046 /* FietsknelpuntenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FietsknelpuntenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1505FF1A80115400058046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1506001A80115400058046 /* FietsknelpuntenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FietsknelpuntenTests.m; sourceTree = "<group>"; };
+		CA4FDC061DD5BC6900F7BF9F /* Fietsknelpunten-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fietsknelpunten-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA4FDC071DD5BC6A00F7BF9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA4FDC091DD5BCFB00F7BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +78,12 @@
 		CA1505E31A80115400058046 /* Fietsknelpunten */ = {
 			isa = PBXGroup;
 			children = (
-				CA1505E81A80115400058046 /* AppDelegate.h */,
-				CA1505E91A80115400058046 /* AppDelegate.m */,
-				CA1505EB1A80115400058046 /* ViewController.h */,
-				CA1505EC1A80115400058046 /* ViewController.m */,
 				CA1505F11A80115400058046 /* Images.xcassets */,
 				CA1505F31A80115400058046 /* LaunchScreen.xib */,
 				CA1505E41A80115400058046 /* Supporting Files */,
+				CA4FDC071DD5BC6A00F7BF9F /* AppDelegate.swift */,
+				CA4FDC061DD5BC6900F7BF9F /* Fietsknelpunten-Bridging-Header.h */,
+				CA4FDC091DD5BCFB00F7BF9F /* MainViewController.swift */,
 			);
 			path = Fietsknelpunten;
 			sourceTree = "<group>";
@@ -165,9 +163,11 @@
 				TargetAttributes = {
 					CA1505E01A80115400058046 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0810;
 					};
 					CA1505F91A80115400058046 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = CA1505E01A80115400058046;
 					};
 				};
@@ -215,8 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1505ED1A80115400058046 /* ViewController.m in Sources */,
-				CA1505EA1A80115400058046 /* AppDelegate.m in Sources */,
+				CA4FDC0A1DD5BCFB00F7BF9F /* MainViewController.swift in Sources */,
+				CA4FDC081DD5BC6A00F7BF9F /* AppDelegate.swift in Sources */,
 				CA1505E71A80115400058046 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,9 +331,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Fietsknelpunten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fietsknelpunten/Fietsknelpunten-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -341,15 +345,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Fietsknelpunten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fietsknelpunten/Fietsknelpunten-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		CA1506081A80115400058046 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -362,6 +370,7 @@
 				INFOPLIST_FILE = FietsknelpuntenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fietsknelpunten.app/Fietsknelpunten";
 			};
 			name = Debug;
@@ -369,6 +378,7 @@
 		CA1506091A80115400058046 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -377,6 +387,7 @@
 				INFOPLIST_FILE = FietsknelpuntenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fietsknelpunten.app/Fietsknelpunten";
 			};
 			name = Release;
