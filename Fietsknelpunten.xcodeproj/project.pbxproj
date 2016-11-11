@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA1505E71A80115400058046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1505E61A80115400058046 /* main.m */; };
-		CA1505F21A80115400058046 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1505F11A80115400058046 /* Images.xcassets */; };
-		CA1505F51A80115400058046 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1505F31A80115400058046 /* LaunchScreen.xib */; };
-		CA4FDC081DD5BC6A00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC071DD5BC6A00F7BF9F /* AppDelegate.swift */; };
-		CA4FDC0A1DD5BCFB00F7BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC091DD5BCFB00F7BF9F /* MainViewController.swift */; };
+		CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */; };
+		CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */; };
+		CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */; };
+		CA4FDC191DD5C28F00F7BF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC121DD5C28F00F7BF9F /* Main.storyboard */; };
+		CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA1505E11A80115400058046 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA1505E51A80115400058046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA1505E61A80115400058046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CA1505F11A80115400058046 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CA1505F41A80115400058046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CA4FDC061DD5BC6900F7BF9F /* Fietsknelpunten-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fietsknelpunten-Bridging-Header.h"; sourceTree = "<group>"; };
-		CA4FDC071DD5BC6A00F7BF9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA4FDC091DD5BCFB00F7BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA4FDC0D1DD5C28F00F7BF9F /* Fietsknelpunten-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fietsknelpunten-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CA4FDC111DD5C28F00F7BF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CA4FDC131DD5C28F00F7BF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA4FDC151DD5C28F00F7BF9F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 		CA1505D81A80115300058046 = {
 			isa = PBXGroup;
 			children = (
-				CA1505E31A80115400058046 /* Fietsknelpunten */,
+				CA4FDC0B1DD5C28F00F7BF9F /* App */,
 				CA1505E21A80115400058046 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,31 +47,31 @@
 		CA1505E21A80115400058046 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA1505E11A80115400058046 /* App.app */,
+				CA1505E11A80115400058046 /* Fietsknelpunten.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CA1505E31A80115400058046 /* Fietsknelpunten */ = {
+		CA4FDC0B1DD5C28F00F7BF9F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CA1505F11A80115400058046 /* Images.xcassets */,
-				CA1505F31A80115400058046 /* LaunchScreen.xib */,
-				CA1505E41A80115400058046 /* Supporting Files */,
-				CA4FDC071DD5BC6A00F7BF9F /* AppDelegate.swift */,
-				CA4FDC061DD5BC6900F7BF9F /* Fietsknelpunten-Bridging-Header.h */,
-				CA4FDC091DD5BCFB00F7BF9F /* MainViewController.swift */,
+				CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */,
+				CA4FDC0D1DD5C28F00F7BF9F /* Fietsknelpunten-Bridging-Header.h */,
+				CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */,
+				CA4FDC0F1DD5C28F00F7BF9F /* Resources */,
 			);
-			path = Fietsknelpunten;
+			path = App;
 			sourceTree = "<group>";
 		};
-		CA1505E41A80115400058046 /* Supporting Files */ = {
+		CA4FDC0F1DD5C28F00F7BF9F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA1505E51A80115400058046 /* Info.plist */,
-				CA1505E61A80115400058046 /* main.m */,
+				CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */,
+				CA4FDC121DD5C28F00F7BF9F /* Main.storyboard */,
+				CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */,
+				CA4FDC151DD5C28F00F7BF9F /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,7 +91,7 @@
 			);
 			name = App;
 			productName = Fietsknelpunten;
-			productReference = CA1505E11A80115400058046 /* App.app */;
+			productReference = CA1505E11A80115400058046 /* Fietsknelpunten.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,8 +132,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1505F51A80115400058046 /* LaunchScreen.xib in Resources */,
-				CA1505F21A80115400058046 /* Images.xcassets in Resources */,
+				CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */,
+				CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */,
+				CA4FDC191DD5C28F00F7BF9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,21 +145,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4FDC0A1DD5BCFB00F7BF9F /* MainViewController.swift in Sources */,
-				CA4FDC081DD5BC6A00F7BF9F /* AppDelegate.swift in Sources */,
-				CA1505E71A80115400058046 /* main.m in Sources */,
+				CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */,
+				CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CA1505F31A80115400058046 /* LaunchScreen.xib */ = {
+		CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CA1505F41A80115400058046 /* Base */,
+				CA4FDC111DD5C28F00F7BF9F /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		CA4FDC121DD5C28F00F7BF9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA4FDC131DD5C28F00F7BF9F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -245,10 +253,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Fietsknelpunten/Info.plist;
+				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Fietsknelpunten/Fietsknelpunten-Bridging-Header.h";
+				PRODUCT_NAME = Fietsknelpunten;
+				SWIFT_OBJC_BRIDGING_HEADER = "App/Fietsknelpunten-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -259,10 +267,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Fietsknelpunten/Info.plist;
+				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Fietsknelpunten/Fietsknelpunten-Bridging-Header.h";
+				PRODUCT_NAME = Fietsknelpunten;
+				SWIFT_OBJC_BRIDGING_HEADER = "App/Fietsknelpunten-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
