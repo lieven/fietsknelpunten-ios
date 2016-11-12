@@ -19,6 +19,9 @@
 		CABEBBA41DD74C47007870AD /* FietsknelpuntenAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CABEBBAD1DD74CFA007870AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBAC1DD74CFA007870AD /* API.swift */; };
 		CABEBBB21DD78845007870AD /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB11DD78845007870AD /* APITests.swift */; };
+		CABEBBB41DD7A849007870AD /* TagGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB31DD7A849007870AD /* TagGroup.swift */; };
+		CABEBBB61DD7A8E8007870AD /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB51DD7A8E8007870AD /* Tag.swift */; };
+		CABEBBB81DD7A961007870AD /* API+Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB71DD7A961007870AD /* API+Tags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		CABEBB9F1DD74C47007870AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CABEBBAC1DD74CFA007870AD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CABEBBB11DD78845007870AD /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		CABEBBB31DD7A849007870AD /* TagGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagGroup.swift; sourceTree = "<group>"; };
+		CABEBBB51DD7A8E8007870AD /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		CABEBBB71DD7A961007870AD /* API+Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+Tags.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,9 +186,12 @@
 		CABEBB8F1DD74C46007870AD /* FietsknelpuntenAPI */ = {
 			isa = PBXGroup;
 			children = (
+				CABEBBAC1DD74CFA007870AD /* API.swift */,
+				CABEBBB71DD7A961007870AD /* API+Tags.swift */,
 				CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */,
 				CABEBB911DD74C46007870AD /* Info.plist */,
-				CABEBBAC1DD74CFA007870AD /* API.swift */,
+				CABEBBB51DD7A8E8007870AD /* Tag.swift */,
+				CABEBBB31DD7A849007870AD /* TagGroup.swift */,
 			);
 			path = FietsknelpuntenAPI;
 			sourceTree = "<group>";
@@ -406,6 +415,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABEBBB61DD7A8E8007870AD /* Tag.swift in Sources */,
+				CABEBBB81DD7A961007870AD /* API+Tags.swift in Sources */,
+				CABEBBB41DD7A849007870AD /* TagGroup.swift in Sources */,
 				CABEBBAD1DD74CFA007870AD /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

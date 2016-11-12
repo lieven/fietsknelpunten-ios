@@ -8,6 +8,7 @@
 
 import UIKit
 import PureLayout
+import FietsknelpuntenAPI
 
 
 class ReportProblemViewController: UIViewController {
@@ -28,6 +29,22 @@ class ReportProblemViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.backgroundColor = UIColor.white
+		
+		API.shared?.getTags() { (success, groups, error) in
+			
+			if let groups = groups, success
+			{
+				for group in groups
+				{
+					print(group.name)
+					
+					for tag in group.tags
+					{
+						print("\t\(tag.name)")
+					}
+				}
+			}
+		}
 	}
 	
 	@objc func cancel() {
