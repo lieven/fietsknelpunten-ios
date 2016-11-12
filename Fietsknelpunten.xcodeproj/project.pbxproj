@@ -13,7 +13,51 @@
 		CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */; };
 		CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */; };
 		CA4FDC1E1DD5CF2900F7BF9F /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */; };
+		CABEBB971DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; };
+		CABEBBA01DD74C47007870AD /* FietsknelpuntenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CABEBBA31DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; };
+		CABEBBA41DD74C47007870AD /* FietsknelpuntenAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CABEBBAD1DD74CFA007870AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBAC1DD74CFA007870AD /* API.swift */; };
+		CABEBBB21DD78845007870AD /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB11DD78845007870AD /* APITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CABEBB981DD74C47007870AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA1505D91A80115300058046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CABEBB8D1DD74C46007870AD;
+			remoteInfo = FietsknelpuntenAPI;
+		};
+		CABEBB9A1DD74C47007870AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA1505D91A80115300058046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1505E01A80115400058046;
+			remoteInfo = App;
+		};
+		CABEBBA11DD74C47007870AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA1505D91A80115300058046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CABEBB8D1DD74C46007870AD;
+			remoteInfo = FietsknelpuntenAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CABEBBAA1DD74C47007870AD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CABEBBA41DD74C47007870AD /* FietsknelpuntenAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
@@ -27,6 +71,13 @@
 		CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA4FDC151DD5C28F00F7BF9F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
+		CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FietsknelpuntenAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FietsknelpuntenAPI.h; sourceTree = "<group>"; };
+		CABEBB911DD74C46007870AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CABEBB961DD74C47007870AD /* FietsknelpuntenAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FietsknelpuntenAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABEBB9F1DD74C47007870AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CABEBBAC1DD74CFA007870AD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CABEBBB11DD78845007870AD /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +86,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */,
+				CABEBBA31DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABEBB8A1DD74C46007870AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABEBB931DD74C47007870AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABEBB971DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				CA4FDC0B1DD5C28F00F7BF9F /* App */,
+				CABEBB8F1DD74C46007870AD /* FietsknelpuntenAPI */,
+				CABEBB9C1DD74C47007870AD /* FietsknelpuntenAPITests */,
 				CA1505E21A80115400058046 /* Products */,
 				8A4690D293CA8B584418F913 /* Pods */,
 				5A84A4567A84FC4CAFC0C232 /* Frameworks */,
@@ -72,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				CA1505E11A80115400058046 /* Fietsknelpunten.app */,
+				CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */,
+				CABEBB961DD74C47007870AD /* FietsknelpuntenAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +177,38 @@
 			path = Report;
 			sourceTree = "<group>";
 		};
+		CABEBB8F1DD74C46007870AD /* FietsknelpuntenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */,
+				CABEBB911DD74C46007870AD /* Info.plist */,
+				CABEBBAC1DD74CFA007870AD /* API.swift */,
+			);
+			path = FietsknelpuntenAPI;
+			sourceTree = "<group>";
+		};
+		CABEBB9C1DD74C47007870AD /* FietsknelpuntenAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				CABEBB9F1DD74C47007870AD /* Info.plist */,
+				CABEBBB11DD78845007870AD /* APITests.swift */,
+			);
+			name = FietsknelpuntenAPITests;
+			path = FietsknelpuntenAPI/Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CABEBB8B1DD74C46007870AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABEBBA01DD74C47007870AD /* FietsknelpuntenAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CA1505E01A80115400058046 /* App */ = {
@@ -119,15 +221,54 @@
 				CA1505DF1A80115400058046 /* Resources */,
 				F881F2A7C88D0233C2065FF9 /* [CP] Embed Pods Frameworks */,
 				539F7AD207BF2728E2EE5A92 /* [CP] Copy Pods Resources */,
+				CABEBBAA1DD74C47007870AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CABEBBA21DD74C47007870AD /* PBXTargetDependency */,
 			);
 			name = App;
 			productName = Fietsknelpunten;
 			productReference = CA1505E11A80115400058046 /* Fietsknelpunten.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CABEBB8D1DD74C46007870AD /* FietsknelpuntenAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CABEBBA91DD74C47007870AD /* Build configuration list for PBXNativeTarget "FietsknelpuntenAPI" */;
+			buildPhases = (
+				CABEBB891DD74C46007870AD /* Sources */,
+				CABEBB8A1DD74C46007870AD /* Frameworks */,
+				CABEBB8B1DD74C46007870AD /* Headers */,
+				CABEBB8C1DD74C46007870AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FietsknelpuntenAPI;
+			productName = FietsknelpuntenAPI;
+			productReference = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CABEBB951DD74C47007870AD /* FietsknelpuntenAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CABEBBAB1DD74C47007870AD /* Build configuration list for PBXNativeTarget "FietsknelpuntenAPITests" */;
+			buildPhases = (
+				CABEBB921DD74C47007870AD /* Sources */,
+				CABEBB931DD74C47007870AD /* Frameworks */,
+				CABEBB941DD74C47007870AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CABEBB991DD74C47007870AD /* PBXTargetDependency */,
+				CABEBB9B1DD74C47007870AD /* PBXTargetDependency */,
+			);
+			name = FietsknelpuntenAPITests;
+			productName = FietsknelpuntenAPITests;
+			productReference = CABEBB961DD74C47007870AD /* FietsknelpuntenAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -135,12 +276,24 @@
 		CA1505D91A80115300058046 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Fietsknelpunten;
 				TargetAttributes = {
 					CA1505E01A80115400058046 = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 0810;
+					};
+					CABEBB8D1DD74C46007870AD = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					CABEBB951DD74C47007870AD = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CA1505E01A80115400058046;
 					};
 				};
 			};
@@ -158,6 +311,8 @@
 			projectRoot = "";
 			targets = (
 				CA1505E01A80115400058046 /* App */,
+				CABEBB8D1DD74C46007870AD /* FietsknelpuntenAPI */,
+				CABEBB951DD74C47007870AD /* FietsknelpuntenAPITests */,
 			);
 		};
 /* End PBXProject section */
@@ -169,6 +324,20 @@
 			files = (
 				CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */,
 				CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABEBB8C1DD74C46007870AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABEBB941DD74C47007870AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +402,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CABEBB891DD74C46007870AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABEBBAD1DD74CFA007870AD /* API.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABEBB921DD74C47007870AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABEBBB21DD78845007870AD /* APITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CABEBB991DD74C47007870AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CABEBB8D1DD74C46007870AD /* FietsknelpuntenAPI */;
+			targetProxy = CABEBB981DD74C47007870AD /* PBXContainerItemProxy */;
+		};
+		CABEBB9B1DD74C47007870AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1505E01A80115400058046 /* App */;
+			targetProxy = CABEBB9A1DD74C47007870AD /* PBXContainerItemProxy */;
+		};
+		CABEBBA21DD74C47007870AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CABEBB8D1DD74C46007870AD /* FietsknelpuntenAPI */;
+			targetProxy = CABEBBA11DD74C47007870AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */ = {
@@ -327,9 +530,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fietsknelpunten;
 				SWIFT_OBJC_BRIDGING_HEADER = "App/Fietsknelpunten-Bridging-Header.h";
@@ -342,13 +547,127 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fietsknelpunten;
 				SWIFT_OBJC_BRIDGING_HEADER = "App/Fietsknelpunten-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CABEBBA51DD74C47007870AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = FietsknelpuntenAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CABEBBA61DD74C47007870AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = FietsknelpuntenAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CABEBBA71DD74C47007870AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = FietsknelpuntenAPI/Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fietsknelpunten.app/Fietsknelpunten";
+			};
+			name = Debug;
+		};
+		CABEBBA81DD74C47007870AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = FietsknelpuntenAPI/Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fietsknelpunten.app/Fietsknelpunten";
 			};
 			name = Release;
 		};
@@ -372,6 +691,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CABEBBA91DD74C47007870AD /* Build configuration list for PBXNativeTarget "FietsknelpuntenAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CABEBBA51DD74C47007870AD /* Debug */,
+				CABEBBA61DD74C47007870AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CABEBBAB1DD74C47007870AD /* Build configuration list for PBXNativeTarget "FietsknelpuntenAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CABEBBA71DD74C47007870AD /* Debug */,
+				CABEBBA81DD74C47007870AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

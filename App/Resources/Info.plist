@@ -36,5 +36,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FietsknelpuntenBaseURL</key>
+	<string>http://localhost/~lieven/fietsknelpunten-platform/</string>
+	<key>FietsknelpuntenAppID</key>
+	<string>be.fietsknelpunten.Fietsknelpunten</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

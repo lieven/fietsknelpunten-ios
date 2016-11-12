@@ -9,13 +9,15 @@
 import UIKit
 import MapKit
 import PureLayout
+import FietsknelpuntenAPI
 
 
-class MainViewController: UIViewController {
-	
+class MainViewController: UIViewController
+{
 	private var mapView: MKMapView?
 	
-	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+	{
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 		
 		self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
@@ -23,18 +25,39 @@ class MainViewController: UIViewController {
 		setupToolbarItems()
 	}
 	
-	required init?(coder aDecoder: NSCoder) {
+	required init?(coder aDecoder: NSCoder)
+	{
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-	override func viewDidLoad() {
+	override func viewDidLoad()
+	{
 		super.viewDidLoad()
 		
 		setupMapView()
 	}
 	
-	private func setupToolbarItems() {
+	override func viewWillAppear(_ animated: Bool)
+	{
+		super.viewWillAppear(animated)
 		
+		API.shared?.sendRequest(action: "test", arguments: nil)
+		{
+			(success, response, error) in
+			
+			if success
+			{
+				print("success: \(response)")
+			}
+			else
+			{
+				print("error: \(error)")
+			}
+		}
+	}
+	
+	private func setupToolbarItems()
+	{
 		self.toolbarItems = [
 			UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
 			UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(reportProblem)),
@@ -42,8 +65,8 @@ class MainViewController: UIViewController {
 		]
 	}
 	
-	private func setupMapView() {
-		
+	private func setupMapView()
+	{
 		let mapView = MKMapView.newAutoLayout()
 		self.mapView = mapView
 		
@@ -53,13 +76,11 @@ class MainViewController: UIViewController {
 	}
 	
 	
-	@objc private func reportProblem() {
-		
+	@objc private func reportProblem()
+	{
 		let reportViewController = ReportProblemViewController()
 		reportViewController.modalPresentationStyle = .formSheet
-		reportViewController.onDismiss = { [weak self] in
-			self?.dismiss(animated: true, completion: nil)
-		}
+		reportViewController.onDismiss = { [weak self] in self?.dismiss(animated: true, completion: nil) }
 		
 		self.present(UINavigationController(rootViewController: reportViewController), animated: true, completion: nil)
 	}
