@@ -13,10 +13,12 @@ import UIKit
 	var window: UIWindow?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-	
-		let window = UIWindow(frame: UIScreen.main.bounds)
-		window.rootViewController = UINavigationController(rootViewController: MainViewController())
 		
+		let navigationController = UINavigationController(rootViewController: MainViewController())
+		navigationController.isToolbarHidden = false
+		
+		let window = UIWindow()
+		window.rootViewController = navigationController
 		self.window = window
 		
 		window.makeKeyAndVisible()

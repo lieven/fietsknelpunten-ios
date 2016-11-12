@@ -11,8 +11,8 @@
 		CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */; };
 		CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */; };
 		CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */; };
-		CA4FDC191DD5C28F00F7BF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC121DD5C28F00F7BF9F /* Main.storyboard */; };
 		CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */; };
+		CA4FDC1E1DD5CF2900F7BF9F /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +24,9 @@
 		CA4FDC0D1DD5C28F00F7BF9F /* Fietsknelpunten-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fietsknelpunten-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CA4FDC111DD5C28F00F7BF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CA4FDC131DD5C28F00F7BF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA4FDC151DD5C28F00F7BF9F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +82,7 @@
 				CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */,
 				CA4FDC0D1DD5C28F00F7BF9F /* Fietsknelpunten-Bridging-Header.h */,
 				CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */,
+				CA4FDC1C1DD5CEBC00F7BF9F /* Report */,
 				CA4FDC0F1DD5C28F00F7BF9F /* Resources */,
 			);
 			path = App;
@@ -91,11 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */,
-				CA4FDC121DD5C28F00F7BF9F /* Main.storyboard */,
 				CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */,
 				CA4FDC151DD5C28F00F7BF9F /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA4FDC1C1DD5CEBC00F7BF9F /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +169,6 @@
 			files = (
 				CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */,
 				CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */,
-				CA4FDC191DD5C28F00F7BF9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4FDC1E1DD5CF2900F7BF9F /* ReportProblemViewController.swift in Sources */,
 				CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */,
 				CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */,
 			);
@@ -234,14 +242,6 @@
 				CA4FDC111DD5C28F00F7BF9F /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		CA4FDC121DD5C28F00F7BF9F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA4FDC131DD5C28F00F7BF9F /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
