@@ -12,6 +12,7 @@ import PureLayout
 class TextFieldCell: UITableViewCell
 {
 	static let reuseIdentifier = "TextFieldCell"
+	static let font = UIFont.systemFont(ofSize: 17.0)
 	
 	let textField = UITextField.newAutoLayout()
 	
@@ -19,11 +20,13 @@ class TextFieldCell: UITableViewCell
 	{
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
-		self.contentView.addSubview(self.textField)
+		textField.font = TextFieldCell.font
 		
-		self.textField.autoPinEdge(toSuperviewMargin: .leading, relation: .equal)
-		self.textField.autoPinEdge(toSuperviewMargin: .trailing, relation: .equal)
-		self.textField.autoAlignAxis(toSuperviewAxis: .horizontal)
+		contentView.addSubview(self.textField)
+		
+		textField.autoPinEdge(toSuperviewMargin: .leading, relation: .equal)
+		textField.autoPinEdge(toSuperviewMargin: .trailing, relation: .equal)
+		textField.autoAlignAxis(toSuperviewAxis: .horizontal)
 	}
 	
 	required init?(coder aDecoder: NSCoder)

@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF6E9E85DBCE64919937A1E /* Pods_App.framework */; };
+		CA12337F1DD8A7010092A525 /* CLLocationManager+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA12337E1DD8A7010092A525 /* CLLocationManager+Authorization.swift */; };
+		CA172C4A1DD8666A008E7A70 /* EditingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */; };
 		CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */; };
 		CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */; };
 		CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */; };
 		CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */; };
 		CA4FDC1E1DD5CF2900F7BF9F /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */; };
+		CABE90E81DD89B9A00746CF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABE90E71DD89B9A00746CF9 /* MapKit.framework */; };
 		CABEBB971DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; };
 		CABEBBA01DD74C47007870AD /* FietsknelpuntenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CABEBBA31DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; };
@@ -27,6 +30,7 @@
 		CABEBBBE1DD7EB48007870AD /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBBD1DD7EB48007870AD /* Array+Safe.swift */; };
 		CABEBBC01DD7EB97007870AD /* Dictionary+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */; };
 		CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */; };
+		CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC31DD7F51C007870AD /* TextViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,14 +75,16 @@
 		523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		7FF6E9E85DBCE64919937A1E /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
+		CA12337E1DD8A7010092A525 /* CLLocationManager+Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Authorization.swift"; sourceTree = "<group>"; };
 		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingNavigationController.swift; sourceTree = "<group>"; };
 		CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA4FDC0D1DD5C28F00F7BF9F /* Fietsknelpunten-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fietsknelpunten-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CA4FDC111DD5C28F00F7BF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA4FDC151DD5C28F00F7BF9F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
+		CABE90E71DD89B9A00746CF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FietsknelpuntenAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FietsknelpuntenAPI.h; sourceTree = "<group>"; };
 		CABEBB911DD74C46007870AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 		CABEBBBD1DD7EB48007870AD /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Conversion.swift"; sourceTree = "<group>"; };
 		CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTagsViewController.swift; sourceTree = "<group>"; };
+		CABEBBC31DD7F51C007870AD /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */,
+				CABE90E81DD89B9A00746CF9 /* MapKit.framework in Frameworks */,
 				CABEBBA31DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +135,7 @@
 		5A84A4567A84FC4CAFC0C232 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CABE90E71DD89B9A00746CF9 /* MapKit.framework */,
 				7FF6E9E85DBCE64919937A1E /* Pods_App.framework */,
 			);
 			name = Frameworks;
@@ -167,7 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */,
-				CA4FDC0D1DD5C28F00F7BF9F /* Fietsknelpunten-Bridging-Header.h */,
+				CA12337E1DD8A7010092A525 /* CLLocationManager+Authorization.swift */,
+				CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */,
 				CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */,
 				CA4FDC1C1DD5CEBC00F7BF9F /* Report */,
 				CA4FDC0F1DD5C28F00F7BF9F /* Resources */,
@@ -192,6 +202,7 @@
 				CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */,
 				CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */,
 				CABEBBB91DD7EA55007870AD /* TextFieldCell.swift */,
+				CABEBBC31DD7F51C007870AD /* TextViewCell.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -306,7 +317,13 @@
 				TargetAttributes = {
 					CA1505E01A80115400058046 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CWWS67CQ58;
 						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CABEBB8D1DD74C46007870AD = {
 						CreatedOnToolsVersion = 8.1;
@@ -424,8 +441,11 @@
 				CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */,
 				CABEBBBC1DD7EAEF007870AD /* Report.swift in Sources */,
 				CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */,
+				CA172C4A1DD8666A008E7A70 /* EditingNavigationController.swift in Sources */,
 				CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */,
 				CABEBBBA1DD7EA55007870AD /* TextFieldCell.swift in Sources */,
+				CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */,
+				CA12337F1DD8A7010092A525 /* CLLocationManager+Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,11 +585,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = CWWS67CQ58;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fietsknelpunten;
-				SWIFT_OBJC_BRIDGING_HEADER = "App/Fietsknelpunten-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -582,11 +602,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = CWWS67CQ58;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Fietsknelpunten;
-				SWIFT_OBJC_BRIDGING_HEADER = "App/Fietsknelpunten-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -731,6 +751,7 @@
 				CABEBBA61DD74C47007870AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CABEBBAB1DD74C47007870AD /* Build configuration list for PBXNativeTarget "FietsknelpuntenAPITests" */ = {
 			isa = XCConfigurationList;
@@ -739,6 +760,7 @@
 				CABEBBA81DD74C47007870AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,12 +7,15 @@
 //
 
 import FietsknelpuntenAPI
+import CoreLocation
 
 
 class Report
 {
 	var title: String?
+	var info: String?
 	var tags = [Tag]()
+	var coordinate: CLLocationCoordinate2D?
 	
 	func tagsString() -> String
 	{

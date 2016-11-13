@@ -58,6 +58,7 @@ class ReportProblemViewController: UITableViewController
 		tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.estimatedRowHeight = 44.0
 		tableView.register(TextFieldCell.self, forCellReuseIdentifier: TextFieldCell.reuseIdentifier)
+		tableView.register(TextViewCell.self, forCellReuseIdentifier: TextViewCell.reuseIdentifier)
 	}
 	
 	@objc func cancel()
@@ -75,12 +76,12 @@ class ReportProblemViewController: UITableViewController
 	{
 		super.viewWillDisappear(animated)
 		
-				self.view.endEditing(true)
+		self.view.endEditing(true)
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
-		return 2
+		return 3
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -111,6 +112,15 @@ class ReportProblemViewController: UITableViewController
 				cell.detailTextLabel?.text = self.report.tagsString()
 				return cell
 			
+			case 2:
+				let cell = tableView.dequeueReusableCell(withIdentifier: TextViewCell.reuseIdentifier, for: indexPath) as! TextViewCell
+				cell.textView.text = self.report.info
+				cell.placeholderLabel.text = NSLocalizedString("REPORT_PROBLEM_INFO_PLACEHOLDER", value: "Description", comment: " Placeholder for the description field when reporting a new problem")
+				cell.updatePlaceholderVisibility()
+				cell.textView.delegate = self
+				cell.minimumNumberOfLines = 3
+				return cell
+			
 			default:
 				fatalError("Index path out of bounds: \(indexPath)")
 		}
@@ -118,6 +128,8 @@ class ReportProblemViewController: UITableViewController
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 	{
+		tableView.deselectRow(at: indexPath, animated: true)
+		
 		switch indexPath.row
 		{
 			case 0:
@@ -134,10 +146,29 @@ class ReportProblemViewController: UITableViewController
 				}
 				
 				self.navigationController?.pushViewController(ReportTagsViewController(report: self.report, tagGroups: tagGroups), animated: true)
-				
+			
+			case 2:
+				guard let cell = tableView.cellForRow(at: indexPath) as? TextViewCell else
+				{
+					return
+				}
+				cell.textView.becomeFirstResponder()
 			
 			default:
 				fatalError("Index path out of bounds: \(indexPath)")
 		}
+	}
+}
+
+extension ReportProblemViewController: UITextViewDelegate
+{
+	func textViewDidChange(_ textView: UITextView)
+	{
+		let currentOffset = tableView.contentOffset
+		UIView.setAnimationsEnabled(false)
+		self.tableView.beginUpdates()
+		self.tableView.endUpdates()
+		UIView.setAnimationsEnabled(true)
+		self.tableView.setContentOffset(currentOffset, animated: false)
 	}
 }
