@@ -22,6 +22,11 @@
 		CABEBBB41DD7A849007870AD /* TagGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB31DD7A849007870AD /* TagGroup.swift */; };
 		CABEBBB61DD7A8E8007870AD /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB51DD7A8E8007870AD /* Tag.swift */; };
 		CABEBBB81DD7A961007870AD /* API+Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB71DD7A961007870AD /* API+Tags.swift */; };
+		CABEBBBA1DD7EA55007870AD /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBB91DD7EA55007870AD /* TextFieldCell.swift */; };
+		CABEBBBC1DD7EAEF007870AD /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBBB1DD7EAEF007870AD /* Report.swift */; };
+		CABEBBBE1DD7EB48007870AD /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBBD1DD7EB48007870AD /* Array+Safe.swift */; };
+		CABEBBC01DD7EB97007870AD /* Dictionary+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */; };
+		CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,11 @@
 		CABEBBB31DD7A849007870AD /* TagGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagGroup.swift; sourceTree = "<group>"; };
 		CABEBBB51DD7A8E8007870AD /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		CABEBBB71DD7A961007870AD /* API+Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+Tags.swift"; sourceTree = "<group>"; };
+		CABEBBB91DD7EA55007870AD /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		CABEBBBB1DD7EAEF007870AD /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		CABEBBBD1DD7EB48007870AD /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
+		CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Conversion.swift"; sourceTree = "<group>"; };
+		CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTagsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +188,10 @@
 		CA4FDC1C1DD5CEBC00F7BF9F /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				CABEBBBB1DD7EAEF007870AD /* Report.swift */,
 				CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */,
+				CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */,
+				CABEBBB91DD7EA55007870AD /* TextFieldCell.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -192,6 +205,8 @@
 				CABEBB911DD74C46007870AD /* Info.plist */,
 				CABEBBB51DD7A8E8007870AD /* Tag.swift */,
 				CABEBBB31DD7A849007870AD /* TagGroup.swift */,
+				CABEBBBD1DD7EB48007870AD /* Array+Safe.swift */,
+				CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */,
 			);
 			path = FietsknelpuntenAPI;
 			sourceTree = "<group>";
@@ -406,8 +421,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4FDC1E1DD5CF2900F7BF9F /* ReportProblemViewController.swift in Sources */,
+				CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */,
+				CABEBBBC1DD7EAEF007870AD /* Report.swift in Sources */,
 				CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */,
 				CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */,
+				CABEBBBA1DD7EA55007870AD /* TextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,8 +434,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABEBBB61DD7A8E8007870AD /* Tag.swift in Sources */,
+				CABEBBBE1DD7EB48007870AD /* Array+Safe.swift in Sources */,
 				CABEBBB81DD7A961007870AD /* API+Tags.swift in Sources */,
 				CABEBBB41DD7A849007870AD /* TagGroup.swift in Sources */,
+				CABEBBC01DD7EB97007870AD /* Dictionary+Conversion.swift in Sources */,
 				CABEBBAD1DD74CFA007870AD /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

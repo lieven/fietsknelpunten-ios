@@ -46,30 +46,6 @@ extension API
 	}
 }
 
-extension Dictionary
-{
-	func string(forKey key: Key, allowConversion: Bool = false, defaultValue: String? = nil) -> String?
-	{
-		guard let value = self[key] else
-		{
-			return defaultValue
-		}
-		
-		if let stringValue = value as? String
-		{
-			return stringValue
-		}
-		else if allowConversion
-		{
-			return "\(value)"
-		}
-		else
-		{
-			return defaultValue
-		}
-	}
-}
-
 extension Tag
 {
 	convenience init?(dictionary: [AnyHashable: Any])
