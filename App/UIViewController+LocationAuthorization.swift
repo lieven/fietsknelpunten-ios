@@ -1,5 +1,5 @@
 //
-//  CLLocationManager+Authorization.swift
+//  UIViewController+LocationAuthorization.swift
 //  Fietsknelpunten
 //
 //  Created by Lieven Dekeyser on 13/11/16.

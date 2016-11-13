@@ -23,11 +23,12 @@ class ReportProblemViewController: UITableViewController
 		}
 	}
 	
-	var report = Report()
+	var report: Report
 	
-	
-	init()
+	init(report: Report)
 	{
+		self.report = report
+		
 		super.init(style: .grouped)
 		
 		self.title = NSLocalizedString("REPORT_PROBLEM_VIEW_TITLE", value: "Report Problem", comment: "Title for the Report Problem view. Should be short")

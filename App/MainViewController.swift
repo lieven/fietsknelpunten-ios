@@ -11,11 +11,12 @@ import MapKit
 import PureLayout
 import FietsknelpuntenAPI
 import CoreLocation
+import MobileCoreServices
 
 
 class MainViewController: EditingViewController
 {
-	private var mapView: MKMapView?
+	private let mapView = MKMapView.newAutoLayout()
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
 	{
@@ -40,11 +41,9 @@ class MainViewController: EditingViewController
 	
 	private func setupMapView()
 	{
-		let mapView = MKMapView.newAutoLayout()
-		self.mapView = mapView
-		
 		self.view.addSubview(mapView)
 		
+		mapView.delegate = self
 		mapView.autoPinEdgesToSuperviewEdges()
 	}
 	
@@ -67,7 +66,7 @@ class MainViewController: EditingViewController
 		}
 		else
 		{
-			let locationBarButtonItem = UIBarButtonItem(barButtonSystemItem: (mapView?.showsUserLocation ?? false) ? .stop : .play, target: self, action: #selector(toggleUserLocation))
+			let locationBarButtonItem = UIBarButtonItem(barButtonSystemItem: mapView.showsUserLocation ? .stop : .play, target: self, action: #selector(toggleUserLocation))
 			
 			self.toolbarItems = [
 				UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(reportProblemByChoosingPhoto)),
@@ -93,10 +92,12 @@ class MainViewController: EditingViewController
 		{
 			[weak self] in
 			
-			guard let strongSelf = self, let mapView = strongSelf.mapView else
+			guard let strongSelf = self else
 			{
 				return
 			}
+			
+			let mapView = strongSelf.mapView
 			
 			if mapView.showsUserLocation
 			{
@@ -116,12 +117,12 @@ class MainViewController: EditingViewController
 	
 	@objc private func cancelReportProblem()
 	{
-		self.isEditing = false
+		reportAnnotation = nil
 	}
 	
 	@objc private func reportProblemByDroppingPin()
 	{
-		self.isEditing = true
+		startNewReport(image: nil, coordinate: nil)
 	}
 	
 	@objc private func reportProblemByChoosingPhoto()
@@ -133,11 +134,11 @@ class MainViewController: EditingViewController
 			let cancel = NSLocalizedString("CANCEL", value: "Cancel", comment: "Cancel button. Should be very short")
 			
 			let camera = UIAlertAction(title: takePhoto, style: .default) { [weak self] (_) in
-				self?.reportProblemUsingCamera()
+				self?.reportProblemUsingImagePicker(sourceType: .camera)
 			}
 			
 			let library = UIAlertAction(title: chooseFromLibrary, style: .default) { [weak self] (_) in
-				self?.reportProblemWithExistingPhoto()
+				self?.reportProblemUsingImagePicker(sourceType: .photoLibrary)
 			}
 			
 			let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -149,23 +150,28 @@ class MainViewController: EditingViewController
 		}
 		else
 		{
-			reportProblemWithExistingPhoto()
+			reportProblemUsingImagePicker(sourceType: .photoLibrary)
 		}
 	}
 	
-	private func reportProblemUsingCamera()
+	private func reportProblemUsingImagePicker(sourceType: UIImagePickerControllerSourceType)
 	{
+		let imagePicker = UIImagePickerController()
+		imagePicker.sourceType = sourceType
+		imagePicker.mediaTypes = [kUTTypeImage as String]
+		imagePicker.delegate = self
 		
+		present(imagePicker, animated: true, completion: nil)
 	}
 	
-	private func reportProblemWithExistingPhoto()
+	@objc fileprivate func reportProblem()
 	{
+		guard let report = self.reportAnnotation?.report else
+		{
+			return
+		}
 		
-	}
-	
-	@objc private func reportProblem()
-	{
-		let reportViewController = ReportProblemViewController()
+		let reportViewController = ReportProblemViewController(report: report)
 		reportViewController.modalPresentationStyle = .formSheet
 		reportViewController.onDismiss = { [weak self] in self?.dismissReportProblem() }
 		
@@ -174,8 +180,171 @@ class MainViewController: EditingViewController
 	
 	private func dismissReportProblem()
 	{
-		self.isEditing = false
-		self.dismiss(animated: true, completion: nil)
+		reportAnnotation = nil
+		
+		dismiss(animated: true, completion: nil)
+	}
+	
+	fileprivate func startNewReport(image: UIImage?, coordinate: CLLocationCoordinate2D?)
+	{
+		let initialCoordinate: CLLocationCoordinate2D
+		
+		if let coordinate = coordinate
+		{
+			initialCoordinate = coordinate
+		}
+		else if mapView.isUserLocationVisible
+		{
+			initialCoordinate = mapView.userLocation.coordinate
+		}
+		else
+		{
+			initialCoordinate = mapView.centerCoordinate
+		}
+		
+		mapView.centerCoordinate = initialCoordinate
+		
+		reportAnnotation = ReportAnnotation(report: Report(coordinate: initialCoordinate, image: image))
+	}
+	
+	private var reportAnnotation: ReportAnnotation?
+	{
+		didSet
+		{
+			if let oldAnnotation = oldValue
+			{
+				mapView.removeAnnotation(oldAnnotation)
+			}
+			
+			if let newAnnotation = reportAnnotation
+			{
+				mapView.addAnnotation(newAnnotation)
+				isEditing = true
+			}
+			else
+			{
+				isEditing = false
+			}
+		}
+	}
+	
+}
+
+extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+	{
+		guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else
+		{
+			print("Should not happen: No image")
+			dismiss(animated: true, completion: nil)
+			return
+		}
+		
+		dismiss(animated: true)
+		{
+			[weak self] in
+			
+			guard let assetURL = info[UIImagePickerControllerReferenceURL] as? URL else
+			{
+				self?.startNewReport(image: image, coordinate: nil)
+				return
+			}
+			
+			print("TODO: get location for image \(assetURL)")
+			self?.startNewReport(image: image, coordinate: nil)
+		}
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
+	{
+		dismiss(animated: true, completion: nil)
 	}
 }
 
+extension MainViewController: MKMapViewDelegate
+{
+	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
+	{
+		if let reportAnnotation = annotation as? ReportAnnotation
+		{
+			let reportPinReuseIdentifier = "ReportPin"
+			
+			let pin: MKPinAnnotationView
+			
+			if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reportPinReuseIdentifier) as? MKPinAnnotationView
+			{
+				pin = dequeuedAnnotationView
+				pin.annotation = reportAnnotation
+			}
+			else
+			{
+				pin = MKPinAnnotationView(annotation: reportAnnotation, reuseIdentifier: reportPinReuseIdentifier)
+				pin.pinTintColor = UIColor.red
+				pin.isDraggable = true
+				pin.animatesDrop = true
+				pin.canShowCallout = true
+				pin.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+				
+			}
+			
+			if let image = reportAnnotation.report.images.first
+			{
+				let imageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
+				imageView.image = image
+				imageView.contentMode = .scaleAspectFill
+				
+				pin.leftCalloutAccessoryView = imageView
+			}
+			else
+			{
+				pin.leftCalloutAccessoryView = nil
+			}
+			
+			return pin
+		}
+		
+		return nil
+	}
+	
+	func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
+	{
+		if control == view.rightCalloutAccessoryView
+		{
+			reportProblem()
+		}
+	}
+}
+
+private class ReportAnnotation: NSObject, MKAnnotation
+{
+	var report: Report
+	
+	init(report: Report)
+	{
+		self.report = report
+		super.init()
+	}
+	
+	var title: String?
+	{
+		return report.title ?? NSLocalizedString("NEW_REPORT_ANNOTATION_TITLE", value: "New Report", comment: "Title for a map annotation for a new report when no title has been chosen yet. Should be short.")
+	}
+	
+	var coordinate: CLLocationCoordinate2D
+	{
+		get
+		{
+			return report.coordinate
+		}
+		set
+		{
+			report.coordinate = newValue
+		}
+	}
+	
+	var subtitle: String?
+	{
+		return report.tagsString()
+	}
+}
