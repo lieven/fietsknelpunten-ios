@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF6E9E85DBCE64919937A1E /* Pods_App.framework */; };
-		CA12337F1DD8A7010092A525 /* CLLocationManager+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA12337E1DD8A7010092A525 /* CLLocationManager+Authorization.swift */; };
+		CA1233811DD8BF020092A525 /* UIViewController+LocationAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */; };
 		CA172C4A1DD8666A008E7A70 /* EditingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */; };
 		CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */; };
 		CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */; };
@@ -75,7 +75,7 @@
 		523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		7FF6E9E85DBCE64919937A1E /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
-		CA12337E1DD8A7010092A525 /* CLLocationManager+Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Authorization.swift"; sourceTree = "<group>"; };
+		CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LocationAuthorization.swift"; sourceTree = "<group>"; };
 		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingNavigationController.swift; sourceTree = "<group>"; };
 		CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,11 +176,11 @@
 			isa = PBXGroup;
 			children = (
 				CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */,
-				CA12337E1DD8A7010092A525 /* CLLocationManager+Authorization.swift */,
 				CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */,
 				CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */,
 				CA4FDC1C1DD5CEBC00F7BF9F /* Report */,
 				CA4FDC0F1DD5C28F00F7BF9F /* Resources */,
+				CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -445,7 +445,7 @@
 				CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */,
 				CABEBBBA1DD7EA55007870AD /* TextFieldCell.swift in Sources */,
 				CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */,
-				CA12337F1DD8A7010092A525 /* CLLocationManager+Authorization.swift in Sources */,
+				CA1233811DD8BF020092A525 /* UIViewController+LocationAuthorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
