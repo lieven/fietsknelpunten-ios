@@ -114,6 +114,11 @@
 		CAE97BFE1DDA73EF007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CAE97C001DDA73EF007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CAE97C041DDA73EF007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAE97C061DDA78A7007D00C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAE97C071DDA78A7007D00C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAE97C081DDA78A7007D00C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAE97C091DDA78A8007D00C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CAE97C0A1DDA78A8007D00C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,6 +526,7 @@
 			children = (
 				CA4FDC111DD5C28F00F7BF9F /* Base */,
 				CAE97C001DDA73EF007D00C0 /* nl */,
+				CAE97C091DDA78A8007D00C0 /* en */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -529,6 +535,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CAE97BF41DDA73EE007D00C0 /* nl */,
+				CAE97C061DDA78A7007D00C0 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -537,6 +544,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CAE97BF91DDA73EF007D00C0 /* nl */,
+				CAE97C071DDA78A7007D00C0 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -545,6 +553,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CAE97BFE1DDA73EF007D00C0 /* nl */,
+				CAE97C081DDA78A7007D00C0 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -553,6 +562,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CAE97C041DDA73EF007D00C0 /* nl */,
+				CAE97C0A1DDA78A8007D00C0 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

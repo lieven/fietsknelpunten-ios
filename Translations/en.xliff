@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="App/Resources/Base.lproj/LaunchScreen.xib" source-language="en" datatype="plaintext">
+  <file original="App/Resources/Base.lproj/LaunchScreen.xib" source-language="en" datatype="plaintext" target-language="en">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8T61a"/>
     </header>
     <body/>
   </file>
-  <file original="App/Resources/Info.plist" source-language="en" datatype="plaintext">
+  <file original="App/Resources/Info.plist" source-language="en" datatype="plaintext" target-language="en">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8T61a"/>
     </header>
@@ -22,7 +22,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="App/Resources/Localizable.strings" source-language="en" datatype="plaintext">
+  <file original="App/Resources/Localizable.strings" source-language="en" datatype="plaintext" target-language="en">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8T61a"/>
     </header>
@@ -75,6 +75,10 @@
         <source>Description</source>
         <note>Placeholder for the description field when reporting a new problem</note>
       </trans-unit>
+      <trans-unit id="REPORT_PROBLEM_SEND_BUTTON">
+        <source>Report Problem</source>
+        <note>Confirmation button when reporting a problem</note>
+      </trans-unit>
       <trans-unit id="REPORT_PROBLEM_TAGS_PLACEHOLDER">
         <source>Type</source>
         <note>Placeholder for the type/tags field when reporting a new problem</note>
@@ -101,7 +105,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="FietsknelpuntenAPI/Info.plist" source-language="en" datatype="plaintext">
+  <file original="FietsknelpuntenAPI/Info.plist" source-language="en" datatype="plaintext" target-language="en">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8T61a"/>
     </header>
@@ -114,7 +118,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="FietsknelpuntenAPI/Tests/Info.plist" source-language="en" datatype="plaintext">
+  <file original="FietsknelpuntenAPI/Tests/Info.plist" source-language="en" datatype="plaintext" target-language="en">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8T61a"/>
     </header>

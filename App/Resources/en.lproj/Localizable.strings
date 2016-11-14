@@ -1,0 +1,57 @@
+/* Cancel button. Should be very short */
+"CANCEL" = "Cancel";
+
+/* Choose from Library button in the action sheet displayed when a user wants to pick a photo. Should be short. */
+"CHOOSE_PHOTO_FROM_LIBRARY" = "Photo from Library";
+
+/* Alert message shown when a user wants to use location services but has previously denied access */
+"LOCATION_DENIED_MESSAGE" = "Location Services is disabled for this application. You can change this in Settings > Privacy > Location Services";
+
+/* Title for the alert shown when a user wants to use location services but has previously denied access. Should be short. */
+"LOCATION_DENIED_TITLE" = "Location Disabled";
+
+/* Title for the action sheet displayed when a user wants to create a new report. Should be very short */
+"NEW_REPORT_ACTIONSHEET_TITLE" = "New Report";
+
+/* Title for a map annotation for a new report when no title has been chosen yet. Should be short. */
+"NEW_REPORT_ANNOTATION_TITLE" = "New Report";
+
+/* Subtitle for new report pins on the map. Should be short. */
+"NEW_REPORT_PIN_SUBTITLE" = "Drag to exact location";
+
+/* OK Button. Should be very short. */
+"OK_BUTTON" = "OK";
+
+/* Alert message shown when a user wants to use photos from their library but has previously denied access */
+"PHOTOSO_DENIED_MESSAGE" = "Photo library access is disabled for this application. You can change this in Settings > Privacy > Photos";
+
+/* Title for the alert shown when a user wants to use photos from their library but has previously denied access. Should be short. */
+"PHOTOS_DENIED_TITLE" = "Photos Access Disabled";
+
+/* Report problem button. Should be short */
+"REPORT_PROBLEM_BUTTON" = "Report";
+
+/* Placeholder for the description field when reporting a new problem */
+"REPORT_PROBLEM_INFO_PLACEHOLDER" = "Description";
+
+/* Confirmation button when reporting a problem */
+"REPORT_PROBLEM_SEND_BUTTON" = "Report Problem";
+
+/* Placeholder for the type/tags field when reporting a new problem */
+"REPORT_PROBLEM_TAGS_PLACEHOLDER" = "Type";
+
+/* Placeholder for the title field when reporting a new problem. */
+"REPORT_PROBLEM_TITLE_PLACEHOLDER" = "Title";
+
+/* Title for the Report Problem view. Should be short */
+"REPORT_PROBLEM_VIEW_TITLE" = "Report Problem";
+
+/* Report a problem without photo */
+"REPORT_PROBLEM_WITHOUT_PHOTO" = "Without Photo";
+
+/* Title for the tags/type view. Should be short. */
+"REPORT_SELECT_TAGS_TITLE" = "Select Type";
+
+/* Take Photo button in the action sheet displayed when a user wants to pick a photo. Should be short. */
+"TAKE_PHOTO" = "Take Photo";
+
