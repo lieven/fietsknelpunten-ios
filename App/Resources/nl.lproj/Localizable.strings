@@ -14,7 +14,7 @@
 "NEW_REPORT_PIN_SUBTITLE" = "Versleep naar exacte locatie";
 
 /* Report problem button. Should be short */
-"REPORT_PROBLEM_BUTTON" = "Meld";
+"REPORT_PROBLEM_BUTTON" = "Meld Probleem";
 
 /* Placeholder for the description field when reporting a new problem */
 "REPORT_PROBLEM_INFO_PLACEHOLDER" = "Beschrijving";
