@@ -58,11 +58,14 @@ extension UIViewController
 	{
 		func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
 		{
-			for completionBlock in completionBlocks
+			if status != .notDetermined
 			{
-				completionBlock(status)
+				for completionBlock in completionBlocks
+				{
+					completionBlock(status)
+				}
+				completionBlocks.removeAll()
 			}
-			completionBlocks.removeAll()
 		}
 		
 		var completionBlocks = [(CLAuthorizationStatus)->()]()

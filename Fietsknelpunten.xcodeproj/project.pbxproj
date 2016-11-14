@@ -31,6 +31,7 @@
 		CABEBBC01DD7EB97007870AD /* Dictionary+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */; };
 		CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */; };
 		CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC31DD7F51C007870AD /* TextViewCell.swift */; };
+		CAE97BEE1DDA4AA6007D00C0 /* TintedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Conversion.swift"; sourceTree = "<group>"; };
 		CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTagsViewController.swift; sourceTree = "<group>"; };
 		CABEBBC31DD7F51C007870AD /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
+		CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */,
 				CABEBBB91DD7EA55007870AD /* TextFieldCell.swift */,
 				CABEBBC31DD7F51C007870AD /* TextViewCell.swift */,
+				CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				CABEBBBC1DD7EAEF007870AD /* Report.swift in Sources */,
 				CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */,
 				CA172C4A1DD8666A008E7A70 /* EditingNavigationController.swift in Sources */,
+				CAE97BEE1DDA4AA6007D00C0 /* TintedButton.swift in Sources */,
 				CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */,
 				CABEBBBA1DD7EA55007870AD /* TextFieldCell.swift in Sources */,
 				CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */,

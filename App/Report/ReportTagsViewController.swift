@@ -22,6 +22,9 @@ class ReportTagsViewController: UITableViewController
 		self.tagGroups = tagGroups
 		
 		super.init(style: .grouped)
+		
+		self.title = NSLocalizedString("REPORT_SELECT_TAGS_TITLE", value: "Select Type", comment: "Title for the tags/type view. Should be short.")
+		self.hidesBottomBarWhenPushed = true
 	}
 	
 	required init?(coder aDecoder: NSCoder)

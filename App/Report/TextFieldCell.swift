@@ -14,6 +14,7 @@ class TextFieldCell: UITableViewCell
 	static let reuseIdentifier = "TextFieldCell"
 	static let font = UIFont.systemFont(ofSize: 17.0)
 	
+	let label = UILabel.newAutoLayout()
 	let textField = UITextField.newAutoLayout()
 	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?)
@@ -21,12 +22,23 @@ class TextFieldCell: UITableViewCell
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
 		textField.font = TextFieldCell.font
+		label.font = TextFieldCell.font
 		
-		contentView.addSubview(self.textField)
+		contentView.addSubview(label)
+		contentView.addSubview(textField)
 		
-		textField.autoPinEdge(toSuperviewMargin: .leading, relation: .equal)
+		label.autoPinEdge(toSuperviewMargin: .leading, relation: .equal)
+		label.autoAlignAxis(toSuperviewAxis: .horizontal)
+		
+		textField.autoPinEdge(.leading, to: .trailing, of: label)
 		textField.autoPinEdge(toSuperviewMargin: .trailing, relation: .equal)
 		textField.autoAlignAxis(toSuperviewAxis: .horizontal)
+		
+		NSLayoutConstraint.autoSetPriority(UILayoutPriorityDefaultHigh)
+		{
+			[weak label] in
+			label?.autoSetContentHuggingPriority(for: .horizontal)
+		}
 	}
 	
 	required init?(coder aDecoder: NSCoder)

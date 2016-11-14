@@ -17,14 +17,48 @@ import MobileCoreServices
 class MainViewController: EditingViewController
 {
 	private let mapView = MKMapView.newAutoLayout()
+	private var firstAppearance = true
+	
+	private var reportAnnotation: ReportAnnotation?
+	{
+		didSet
+		{
+			if let oldAnnotation = oldValue
+			{
+				mapView.removeAnnotation(oldAnnotation)
+			}
+			
+			if let newAnnotation = reportAnnotation
+			{
+				mapView.addAnnotation(newAnnotation)
+				isEditing = true
+			}
+			else
+			{
+				isEditing = false
+			}
+		}
+	}
+	
+	private var tagGroups: [TagGroup]?
+	
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
 	{
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 		
-		self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+		self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		self.hidesBottomBarWhenPushed = false
 		
 		updateToolbarItems()
+		
+		API.shared?.getTags()
+		{
+			[weak self] (success, groups, error) in
+			
+			self?.tagGroups = groups
+		}
 	}
 	
 	required init?(coder aDecoder: NSCoder)
@@ -47,9 +81,15 @@ class MainViewController: EditingViewController
 		mapView.autoPinEdgesToSuperviewEdges()
 	}
 	
-	override func viewWillAppear(_ animated: Bool)
+	override func viewDidAppear(_ animated: Bool)
 	{
-		super.viewWillAppear(animated)
+		super.viewDidAppear(animated)
+		
+		if firstAppearance
+		{
+			showUserLocation()
+			firstAppearance = false
+		}
 	}
 	
 	private func updateToolbarItems()
@@ -61,19 +101,15 @@ class MainViewController: EditingViewController
 			self.toolbarItems = [
 				UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelReportProblem)),
 				UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-				UIBarButtonItem(title: report, style: .done, target: self, action: #selector(reportProblem))
+				UIBarButtonItem(title: report, style: .done, target: self, action: #selector(showReport))
 			]
 		}
 		else
 		{
-			let locationBarButtonItem = UIBarButtonItem(barButtonSystemItem: mapView.showsUserLocation ? .stop : .play, target: self, action: #selector(toggleUserLocation))
-			
 			self.toolbarItems = [
-				UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(reportProblemByChoosingPhoto)),
 				UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-				locationBarButtonItem,
+				UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(reportProblem)),
 				UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-				UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(reportProblemByDroppingPin))
 			]
 		}
 	}
@@ -86,7 +122,7 @@ class MainViewController: EditingViewController
 		}
 	}
 	
-	@objc private func toggleUserLocation()
+	private func showUserLocation()
 	{
 		checkLocationAuthorization()
 		{
@@ -98,16 +134,8 @@ class MainViewController: EditingViewController
 			}
 			
 			let mapView = strongSelf.mapView
-			
-			if mapView.showsUserLocation
-			{
-				mapView.showsUserLocation = false
-			}
-			else
-			{
-				mapView.showsUserLocation = true
-				mapView.userTrackingMode = .follow
-			}
+			mapView.showsUserLocation = true
+			mapView.userTrackingMode = .follow
 			
 			strongSelf.updateToolbarItems()
 		}
@@ -125,33 +153,35 @@ class MainViewController: EditingViewController
 		startNewReport(image: nil, coordinate: nil)
 	}
 	
-	@objc private func reportProblemByChoosingPhoto()
+	@objc private func reportProblem()
 	{
+		let newReportTitle = NSLocalizedString("NEW_REPORT_ACTIONSHEET_TITLE", value: "New Report", comment: "Title for the action sheet displayed when a user wants to create a new report. Should be very short")
+		let actionSheet = UIAlertController(title: newReportTitle, message: nil, preferredStyle: .actionSheet)
+		
 		if UIImagePickerController.isSourceTypeAvailable(.camera)
 		{
 			let takePhoto = NSLocalizedString("TAKE_PHOTO", value: "Take Photo", comment: "Take Photo button in the action sheet displayed when a user wants to pick a photo. Should be short.")
-			let chooseFromLibrary = NSLocalizedString("CHOOSE_PHOTO_FROM_LIBRARY", value: "Choose from Library", comment: "Choose from Library button in the action sheet displayed when a user wants to pick a photo. Should be short.")
-			let cancel = NSLocalizedString("CANCEL", value: "Cancel", comment: "Cancel button. Should be very short")
 			
-			let camera = UIAlertAction(title: takePhoto, style: .default) { [weak self] (_) in
+			actionSheet.addAction(UIAlertAction(title: takePhoto, style: .default) { [weak self] (_) in
 				self?.reportProblemUsingImagePicker(sourceType: .camera)
-			}
-			
-			let library = UIAlertAction(title: chooseFromLibrary, style: .default) { [weak self] (_) in
-				self?.reportProblemUsingImagePicker(sourceType: .photoLibrary)
-			}
-			
-			let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-			actionSheet.addAction(camera)
-			actionSheet.addAction(library)
-			actionSheet.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
-			
-			present(actionSheet, animated: true, completion: nil)
+			})
 		}
-		else
-		{
-			reportProblemUsingImagePicker(sourceType: .photoLibrary)
-		}
+		
+		let chooseFromLibrary = NSLocalizedString("CHOOSE_PHOTO_FROM_LIBRARY", value: "Photo from Library", comment: "Choose from Library button in the action sheet displayed when a user wants to pick a photo. Should be short.")
+		actionSheet.addAction(UIAlertAction(title: chooseFromLibrary, style: .default) { [weak self] (_) in
+			self?.reportProblemUsingImagePicker(sourceType: .photoLibrary)
+		})
+		
+		
+		let withoutPhoto = NSLocalizedString("REPORT_PROBLEM_WITHOUT_PHOTO", value: "Without Photo", comment: "Report a problem without photo")
+		actionSheet.addAction(UIAlertAction(title: withoutPhoto, style: .default) { [weak self] (_) in
+			self?.startNewReport(image: nil, coordinate: nil)
+		})
+		
+		let cancel = NSLocalizedString("CANCEL", value: "Cancel", comment: "Cancel button. Should be very short")
+		actionSheet.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
+		
+		present(actionSheet, animated: true, completion: nil)
 	}
 	
 	private func reportProblemUsingImagePicker(sourceType: UIImagePickerControllerSourceType)
@@ -162,27 +192,6 @@ class MainViewController: EditingViewController
 		imagePicker.delegate = self
 		
 		present(imagePicker, animated: true, completion: nil)
-	}
-	
-	@objc fileprivate func reportProblem()
-	{
-		guard let report = self.reportAnnotation?.report else
-		{
-			return
-		}
-		
-		let reportViewController = ReportProblemViewController(report: report)
-		reportViewController.modalPresentationStyle = .formSheet
-		reportViewController.onDismiss = { [weak self] in self?.dismissReportProblem() }
-		
-		self.present(UINavigationController(rootViewController: reportViewController), animated: true, completion: nil)
-	}
-	
-	private func dismissReportProblem()
-	{
-		reportAnnotation = nil
-		
-		dismiss(animated: true, completion: nil)
 	}
 	
 	fileprivate func startNewReport(image: UIImage?, coordinate: CLLocationCoordinate2D?)
@@ -204,28 +213,28 @@ class MainViewController: EditingViewController
 		
 		mapView.centerCoordinate = initialCoordinate
 		
-		reportAnnotation = ReportAnnotation(report: Report(coordinate: initialCoordinate, image: image))
+		let annotation = ReportAnnotation(report: Report(coordinate: initialCoordinate, image: image))
+		self.reportAnnotation = annotation
+		mapView.selectAnnotation(annotation, animated: true)
 	}
 	
-	private var reportAnnotation: ReportAnnotation?
+	@objc fileprivate func showReport()
 	{
-		didSet
+		guard let report = self.reportAnnotation?.report, let navigationController = self.navigationController else
 		{
-			if let oldAnnotation = oldValue
-			{
-				mapView.removeAnnotation(oldAnnotation)
-			}
-			
-			if let newAnnotation = reportAnnotation
-			{
-				mapView.addAnnotation(newAnnotation)
-				isEditing = true
-			}
-			else
-			{
-				isEditing = false
-			}
+			return
 		}
+		
+		let reportViewController = ReportProblemViewController(report: report)
+		reportViewController.onDiscard = { [weak self] in self?.discardProblemReport() }
+		navigationController.pushViewController(reportViewController, animated: true)
+	}
+	
+	private func discardProblemReport()
+	{
+		self.reportAnnotation = nil
+		
+		let _ = self.navigationController?.popToRootViewController(animated: true)
 	}
 	
 }
@@ -284,7 +293,6 @@ extension MainViewController: MKMapViewDelegate
 				pin.isDraggable = true
 				pin.animatesDrop = true
 				pin.canShowCallout = true
-				pin.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
 				
 			}
 			
@@ -311,7 +319,7 @@ extension MainViewController: MKMapViewDelegate
 	{
 		if control == view.rightCalloutAccessoryView
 		{
-			reportProblem()
+			showReport()
 		}
 	}
 }
@@ -345,6 +353,6 @@ private class ReportAnnotation: NSObject, MKAnnotation
 	
 	var subtitle: String?
 	{
-		return report.tagsString()
+		return NSLocalizedString("NEW_REPORT_PIN_SUBTITLE", value:"Drag to exact location", comment: "Subtitle for new report pins on the map. Should be short.")
 	}
 }

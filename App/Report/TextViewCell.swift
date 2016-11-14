@@ -11,6 +11,7 @@ import UIKit
 class TextViewCell: UITableViewCell
 {
 	static let reuseIdentifier = "TextViewCell"
+	static let placeholderColor = UIColor(red: 0.78, green: 0.78, blue: 0.8, alpha: 1.0)
 	
 	let textView = UITextView.newAutoLayout()
 	let placeholderLabel = UILabel.newAutoLayout()
@@ -30,13 +31,15 @@ class TextViewCell: UITableViewCell
 		
 		placeholderLabel.backgroundColor = UIColor.clear
 		placeholderLabel.font = font
-		placeholderLabel.textColor = UIColor(red: 0.78, green: 0.78, blue: 0.8, alpha: 1.0)
+		placeholderLabel.textColor = TextViewCell.placeholderColor
+		placeholderLabel.highlightedTextColor = UIColor.white
 		placeholderLabel.isHidden = true
 		
 		contentView.addSubview(textView)
 		contentView.addSubview(placeholderLabel)
 		
-		textView.autoPinEdgesToSuperviewMargins()
+		textView.autoPinEdges(toSuperviewMarginsExcludingEdge: .bottom)
+		textView.autoPinEdge(toSuperviewMargin: .bottom, relation: .greaterThanOrEqual)
 		updateHeightConstraint()
 		
 		placeholderLabel.autoPinEdges(toSuperviewMarginsExcludingEdge: .bottom)
