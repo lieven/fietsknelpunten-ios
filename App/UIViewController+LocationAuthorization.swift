@@ -14,31 +14,36 @@ extension UIViewController
 {
 	func checkLocationAuthorization(denied: (()->())? = nil, authorized: @escaping ()->())
 	{
-		switch CLLocationManager.authorizationStatus()
+		let status = CLLocationManager.authorizationStatus()
+		
+		let handleDeterminedStatus =
 		{
-			case .notDetermined:
-				UIViewController.requestAuthorization()
-				{
-					(status) in
-					
-					if status == .authorizedAlways || status == .authorizedWhenInUse
-					{
-						authorized()
-					}
-				}
+			[weak self] (status: CLAuthorizationStatus) in
 			
-			case .denied:
+			if status == .denied
+			{
 				if let denied = denied
 				{
 					denied()
 				}
 				else
 				{
-					presentLocationDeniedAlert()
+					self?.presentLocationDeniedAlert()
 				}
-				
-			default:
+			}
+			else if status == .authorizedAlways || status == .authorizedWhenInUse
+			{
 				authorized()
+			}
+		}
+		
+		if status == .notDetermined
+		{
+			UIViewController.requestLocationAuthorization(completion: handleDeterminedStatus) 
+		}
+		else
+		{
+			handleDeterminedStatus(status)
 		}
 	}
 	
@@ -74,7 +79,7 @@ extension UIViewController
 	private static let locationAuthorizationManager = CLLocationManager()
 	private static let locationAuthorizationDelegate = LocationAuthorizationDelegate()
 	
-	private static func requestAuthorization(completion: @escaping (CLAuthorizationStatus)->())
+	private static func requestLocationAuthorization(completion: @escaping (CLAuthorizationStatus)->())
 	{
 		locationAuthorizationManager.delegate = locationAuthorizationDelegate
 		

@@ -32,6 +32,7 @@
 		CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */; };
 		CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC31DD7F51C007870AD /* TextViewCell.swift */; };
 		CAE97BEE1DDA4AA6007D00C0 /* TintedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */; };
+		CAE97BF01DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTagsViewController.swift; sourceTree = "<group>"; };
 		CABEBBC31DD7F51C007870AD /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
 		CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedButton.swift; sourceTree = "<group>"; };
+		CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PhotosAuthorization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				CA4FDC1C1DD5CEBC00F7BF9F /* Report */,
 				CA4FDC0F1DD5C28F00F7BF9F /* Resources */,
 				CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */,
+				CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4FDC1E1DD5CF2900F7BF9F /* ReportProblemViewController.swift in Sources */,
+				CAE97BF01DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift in Sources */,
 				CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */,
 				CABEBBBC1DD7EAEF007870AD /* Report.swift in Sources */,
 				CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */,

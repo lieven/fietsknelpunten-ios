@@ -12,6 +12,7 @@ import PureLayout
 import FietsknelpuntenAPI
 import CoreLocation
 import MobileCoreServices
+import Photos
 
 
 class MainViewController: EditingViewController
@@ -236,7 +237,6 @@ class MainViewController: EditingViewController
 		
 		let _ = self.navigationController?.popToRootViewController(animated: true)
 	}
-	
 }
 
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
@@ -254,14 +254,25 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
 		{
 			[weak self] in
 			
-			guard let assetURL = info[UIImagePickerControllerReferenceURL] as? URL else
+			let continueWithoutLocation: ()->() =
 			{
 				self?.startNewReport(image: image, coordinate: nil)
+			}
+			
+			guard let assetURL = info[UIImagePickerControllerReferenceURL] as? URL else
+			{
+				continueWithoutLocation()
 				return
 			}
 			
-			print("TODO: get location for image \(assetURL)")
-			self?.startNewReport(image: image, coordinate: nil)
+			let continueWithLocation: ()->() = 
+			{
+				let asset = PHAsset.fetchAssets(withALAssetURLs: [assetURL], options: nil).firstObject
+				let location = asset?.location
+				self?.startNewReport(image: image, coordinate: location?.coordinate)
+			}
+			
+			self?.checkPhotosAuthorization(denied: continueWithoutLocation, authorized: continueWithLocation)
 		}
 	}
 	
