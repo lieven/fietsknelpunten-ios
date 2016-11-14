@@ -33,6 +33,10 @@
 		CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC31DD7F51C007870AD /* TextViewCell.swift */; };
 		CAE97BEE1DDA4AA6007D00C0 /* TintedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */; };
 		CAE97BF01DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */; };
+		CAE97BF31DDA73EE007D00C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE97BF51DDA73EE007D00C0 /* InfoPlist.strings */; };
+		CAE97BF81DDA73EF007D00C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE97BFA1DDA73EF007D00C0 /* InfoPlist.strings */; };
+		CAE97BFD1DDA73EF007D00C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE97BFF1DDA73EF007D00C0 /* InfoPlist.strings */; };
+		CAE97C031DDA73EF007D00C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE97C051DDA73EF007D00C0 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,11 @@
 		CABEBBC31DD7F51C007870AD /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
 		CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedButton.swift; sourceTree = "<group>"; };
 		CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PhotosAuthorization.swift"; sourceTree = "<group>"; };
+		CAE97BF41DDA73EE007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAE97BF91DDA73EF007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAE97BFE1DDA73EF007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAE97C001DDA73EF007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CAE97C041DDA73EF007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +202,8 @@
 		CA4FDC0F1DD5C28F00F7BF9F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAE97C051DDA73EF007D00C0 /* Localizable.strings */,
+				CAE97BFF1DDA73EF007D00C0 /* InfoPlist.strings */,
 				CA4FDC101DD5C28F00F7BF9F /* LaunchScreen.xib */,
 				CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */,
 				CA4FDC151DD5C28F00F7BF9F /* Info.plist */,
@@ -216,6 +227,7 @@
 		CABEBB8F1DD74C46007870AD /* FietsknelpuntenAPI */ = {
 			isa = PBXGroup;
 			children = (
+				CAE97BFA1DDA73EF007D00C0 /* InfoPlist.strings */,
 				CABEBBAC1DD74CFA007870AD /* API.swift */,
 				CABEBBB71DD7A961007870AD /* API+Tags.swift */,
 				CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */,
@@ -231,6 +243,7 @@
 		CABEBB9C1DD74C47007870AD /* FietsknelpuntenAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				CAE97BF51DDA73EE007D00C0 /* InfoPlist.strings */,
 				CABEBB9F1DD74C47007870AD /* Info.plist */,
 				CABEBBB11DD78845007870AD /* APITests.swift */,
 			);
@@ -370,6 +383,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4FDC1A1DD5C28F00F7BF9F /* Images.xcassets in Resources */,
+				CAE97C031DDA73EF007D00C0 /* Localizable.strings in Resources */,
+				CAE97BFD1DDA73EF007D00C0 /* InfoPlist.strings in Resources */,
 				CA4FDC181DD5C28F00F7BF9F /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE97BF81DDA73EF007D00C0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE97BF31DDA73EE007D00C0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,8 +520,41 @@
 			isa = PBXVariantGroup;
 			children = (
 				CA4FDC111DD5C28F00F7BF9F /* Base */,
+				CAE97C001DDA73EF007D00C0 /* nl */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		CAE97BF51DDA73EE007D00C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAE97BF41DDA73EE007D00C0 /* nl */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAE97BFA1DDA73EF007D00C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAE97BF91DDA73EF007D00C0 /* nl */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAE97BFF1DDA73EF007D00C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAE97BFE1DDA73EF007D00C0 /* nl */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAE97C051DDA73EF007D00C0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAE97C041DDA73EF007D00C0 /* nl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -547,6 +597,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -581,6 +632,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

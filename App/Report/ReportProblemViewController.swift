@@ -120,7 +120,7 @@ class ReportProblemViewController: UITableViewController
 		let footerView = UIView()
 		
 		let reportButton = TintedButton.newAutoLayout()
-		reportButton.setTitle("Send Report", for: .normal)
+		reportButton.setTitle(NSLocalizedString("REPORT_PROBLEM_SEND_BUTTON", value: "Report Problem", comment: "Confirmation button when reporting a problem"), for: .normal)
 		reportButton.contentEdgeInsets = UIEdgeInsets(top: 6.0, left: 20.0, bottom: 6.0, right: 20.0)
 		reportButton.addTarget(self, action: #selector(sendReport), for: .touchUpInside)
 		

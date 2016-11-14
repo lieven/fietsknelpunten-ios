@@ -159,12 +159,20 @@ class MainViewController: EditingViewController
 		let newReportTitle = NSLocalizedString("NEW_REPORT_ACTIONSHEET_TITLE", value: "New Report", comment: "Title for the action sheet displayed when a user wants to create a new report. Should be very short")
 		let actionSheet = UIAlertController(title: newReportTitle, message: nil, preferredStyle: .actionSheet)
 		
-		if UIImagePickerController.isSourceTypeAvailable(.camera)
+		let cameraAvailable = UIImagePickerController.isSourceTypeAvailable(.camera)
+		
+		#if DEBUG
+		let showCamera = true
+		#else
+		let showCamera = cameraAvailable
+		#endif // DEBUG
+		
+		if showCamera
 		{
 			let takePhoto = NSLocalizedString("TAKE_PHOTO", value: "Take Photo", comment: "Take Photo button in the action sheet displayed when a user wants to pick a photo. Should be short.")
 			
 			actionSheet.addAction(UIAlertAction(title: takePhoto, style: .default) { [weak self] (_) in
-				self?.reportProblemUsingImagePicker(sourceType: .camera)
+				self?.reportProblemUsingImagePicker(sourceType: cameraAvailable ? .camera : .photoLibrary)
 			})
 		}
 		
