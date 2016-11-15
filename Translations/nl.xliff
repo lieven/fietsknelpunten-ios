@@ -74,7 +74,7 @@
       </trans-unit>
       <trans-unit id="REPORT_PROBLEM_BUTTON">
         <source>Report</source>
-        <target>Meld Probleem</target>
+        <target>Ga verder</target>
         <note>Report problem button. Should be short</note>
       </trans-unit>
       <trans-unit id="REPORT_PROBLEM_INFO_PLACEHOLDER">
@@ -84,6 +84,7 @@
       </trans-unit>
       <trans-unit id="REPORT_PROBLEM_SEND_BUTTON">
         <source>Report Problem</source>
+        <target>Verzend melding</target>
         <note>Confirmation button when reporting a problem</note>
       </trans-unit>
       <trans-unit id="REPORT_PROBLEM_TAGS_PLACEHOLDER">

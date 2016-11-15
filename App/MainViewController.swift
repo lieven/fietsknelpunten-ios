@@ -39,10 +39,7 @@ class MainViewController: EditingViewController
 				isEditing = false
 			}
 		}
-	}
-	
-	private var tagGroups: [TagGroup]?
-	
+	}	
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
 	{
@@ -53,13 +50,6 @@ class MainViewController: EditingViewController
 		self.hidesBottomBarWhenPushed = false
 		
 		updateToolbarItems()
-		
-		API.shared?.getTags()
-		{
-			[weak self] (success, groups, error) in
-			
-			self?.tagGroups = groups
-		}
 	}
 	
 	required init?(coder aDecoder: NSCoder)
@@ -355,7 +345,18 @@ private class ReportAnnotation: NSObject, MKAnnotation
 	
 	var title: String?
 	{
-		return report.title ?? NSLocalizedString("NEW_REPORT_ANNOTATION_TITLE", value: "New Report", comment: "Title for a map annotation for a new report when no title has been chosen yet. Should be short.")
+		if let title = report.title
+		{
+			return title
+		}
+		
+		let tagsString = report.tagsString()
+		if tagsString.characters.count > 0
+		{
+			return tagsString
+		}
+		
+		return NSLocalizedString("NEW_REPORT_ANNOTATION_TITLE", value: "New Report", comment: "Title for a map annotation for a new report when no title has been chosen yet. Should be short.")
 	}
 	
 	var coordinate: CLLocationCoordinate2D

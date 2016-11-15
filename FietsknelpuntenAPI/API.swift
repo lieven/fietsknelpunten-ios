@@ -41,7 +41,7 @@ public class HttpStatusCode: NSError
 }
 
 
-public class API: NSObject
+internal class API: NSObject
 {
 	public static var shared: API? = {
 		

@@ -18,6 +18,7 @@
 		CA5B1B051DDA832F00A738F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA5B1AFF1DDA832F00A738F4 /* InfoPlist.strings */; };
 		CA5B1B061DDA832F00A738F4 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA5B1B011DDA832F00A738F4 /* LaunchScreen.strings */; };
 		CA5B1B071DDA832F00A738F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA5B1B031DDA832F00A738F4 /* Localizable.strings */; };
+		CA5B1B0A1DDA86D600A738F4 /* Fietsknelpunten.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5B1B091DDA86D600A738F4 /* Fietsknelpunten.swift */; };
 		CABE90E81DD89B9A00746CF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABE90E71DD89B9A00746CF9 /* MapKit.framework */; };
 		CABEBB971DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; };
 		CABEBBA01DD74C47007870AD /* FietsknelpuntenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -95,6 +96,7 @@
 		CA5B1B021DDA832F00A738F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CA5B1B041DDA832F00A738F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA5B1B081DDA839A00A738F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CA5B1B091DDA86D600A738F4 /* Fietsknelpunten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fietsknelpunten.swift; sourceTree = "<group>"; };
 		CABE90E71DD89B9A00746CF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FietsknelpuntenAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FietsknelpuntenAPI.h; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				CABEBBB31DD7A849007870AD /* TagGroup.swift */,
 				CABEBBBD1DD7EB48007870AD /* Array+Safe.swift */,
 				CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */,
+				CA5B1B091DDA86D600A738F4 /* Fietsknelpunten.swift */,
 			);
 			path = FietsknelpuntenAPI;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5B1B0A1DDA86D600A738F4 /* Fietsknelpunten.swift in Sources */,
 				CABEBBB61DD7A8E8007870AD /* Tag.swift in Sources */,
 				CABEBBBE1DD7EB48007870AD /* Array+Safe.swift in Sources */,
 				CABEBBB81DD7A961007870AD /* API+Tags.swift in Sources */,

@@ -35,7 +35,7 @@ class ReportProblemViewController: UITableViewController
 		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 		self.hidesBottomBarWhenPushed = true
 		
-		API.shared?.getTags()
+		Fietsknelpunten.shared.getTags(refresh: false)
 		{
 			[weak self] (success, groups, error) in
 			
