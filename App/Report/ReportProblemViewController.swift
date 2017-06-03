@@ -9,17 +9,43 @@
 import UIKit
 import PureLayout
 import FietsknelpuntenAPI
+import CoreLocation
 
 
 class ReportProblemViewController: UITableViewController
 {
 	var onDiscard: (()->())?
 	
+	var jurisdictions: [Jurisdiction]?
+	{
+		didSet
+		{
+			reloadFilteredJurisdictions()
+		}
+	}
+	
+	var filteredJurisdictions: [Jurisdiction] = []
+	
+	private func filterJurisdictions() -> [Jurisdiction]
+	{
+		guard let jurisdictions = jurisdictions, let countryCode = report.countryCode, let postalCode = report.postalCode else
+		{
+			return []
+		}
+		
+		return jurisdictions.filter { $0.countryCode == countryCode && $0.postalCodes.contains(postalCode) }
+	}
+	
+	private func reloadFilteredJurisdictions() {
+		filteredJurisdictions = filterJurisdictions().sorted { $0.postalCodes.count < $1.postalCodes.count }
+		tableView.reloadData()
+	}
+	
 	var tagGroups: [TagGroup]?
 	{
 		didSet
 		{
-			self.tableView.reloadData()
+			tableView.reloadData()
 		}
 	}
 	
@@ -35,11 +61,30 @@ class ReportProblemViewController: UITableViewController
 		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 		self.hidesBottomBarWhenPushed = true
 		
-		Fietsknelpunten.shared.getTags(refresh: false)
+		let controller = Fietsknelpunten.shared
+		
+		tagGroups = controller.tagGroups
+		if tagGroups == nil
 		{
-			[weak self] (success, groups, error) in
-			
-			self?.tagGroups = groups
+			controller.refreshTags()
+			{
+				[weak self] (success, groups, error) in
+				self?.tagGroups = groups
+			}
+		}
+		
+		jurisdictions = controller.jurisdictions
+		if jurisdictions == nil
+		{
+			controller.refreshJurisdictions()
+			{
+				[weak self] (success, jurisdictions, error) in
+				self?.jurisdictions = jurisdictions
+			}
+		}
+		else
+		{
+			reloadFilteredJurisdictions()
 		}
 	}
 	
@@ -98,7 +143,8 @@ class ReportProblemViewController: UITableViewController
 	
 	let titleRowIndex = 0
 	let tagRowIndex = 1
-	let infoRowIndex = 2
+	let jurisdictionRowIndex = 2
+	let infoRowIndex = 3
 	
 	var titleFieldCell: TextFieldCell?
 	{
@@ -170,6 +216,29 @@ class ReportProblemViewController: UITableViewController
 				
 				return cell
 			
+			case jurisdictionRowIndex:
+				let reuseIdentifier = "JurisdictionReuseIdentifier"
+				
+				let cell: UITableViewCell
+				
+				if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
+				{
+					cell = dequeuedCell
+				}
+				else
+				{
+					cell = UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
+					cell.textLabel?.textColor = TextViewCell.placeholderColor
+					cell.textLabel?.highlightedTextColor = UIColor.white
+					cell.textLabel?.font = TextFieldCell.font
+				}
+				
+				let label = NSLocalizedString("REPORT_PROBLEM_JURISDICTION_PLACEHOLDER", value: "Jurisdiction", comment: "Placeholder for the jurisdiction field when reporting a new problem")
+				cell.textLabel?.text = "\(label): \(report.jurisdiction?.name ?? "")"
+				cell.accessoryType = jurisdictions == nil ? .none : .disclosureIndicator
+				
+				return cell
+			
 			case infoRowIndex:
 				let cell = tableView.dequeueReusableCell(withIdentifier: TextViewCell.reuseIdentifier, for: indexPath) as! TextViewCell
 				cell.textView.text = self.report.info
@@ -194,12 +263,21 @@ class ReportProblemViewController: UITableViewController
 				titleFieldCell?.textField.becomeFirstResponder()
 			
 			case tagRowIndex:
-				guard let tagGroups = self.tagGroups else
+				guard let tagGroups = tagGroups else
 				{
 					return
 				}
 				
-				self.navigationController?.pushViewController(ReportTagsViewController(report: self.report, tagGroups: tagGroups), animated: true)
+				self.navigationController?.pushViewController(ReportTagsViewController(report: report, tagGroups: tagGroups), animated: true)
+			
+			case jurisdictionRowIndex:
+				let filteredJurisdictions = self.filteredJurisdictions
+				guard filteredJurisdictions.count > 0 else
+				{
+					return
+				}
+				
+				self.navigationController?.pushViewController(ReportJurisdictionViewController(report: report, jurisdictions: filteredJurisdictions), animated: true)
 			
 			case infoRowIndex:
 				infoViewCell?.textView.becomeFirstResponder()

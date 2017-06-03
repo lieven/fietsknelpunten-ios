@@ -40,3 +40,6 @@
 /* Take Photo button in the action sheet displayed when a user wants to pick a photo. Should be short. */
 "TAKE_PHOTO" = "Maak nieuwe foto";
 
+"REPORT_SELECT_JURISDICTION_TITLE" = "Bevoegde Dienst";
+"REPORT_PROBLEM_JURISDICTION_PLACEHOLDER" = "Bevoegde Dienst";
+

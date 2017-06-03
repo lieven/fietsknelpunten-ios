@@ -17,10 +17,13 @@ import Photos
 
 class MainViewController: EditingViewController
 {
+	private let mapTypeSegmentedControl: UISegmentedControl
 	private let mapView = MKMapView.newAutoLayout()
 	private var firstAppearance = true
 	
-	private var reportAnnotation: ReportAnnotation?
+	fileprivate let geocoder = CLGeocoder()
+	
+	fileprivate var reportAnnotation: ReportAnnotation?
 	{
 		didSet
 		{
@@ -32,6 +35,7 @@ class MainViewController: EditingViewController
 			if let newAnnotation = reportAnnotation
 			{
 				mapView.addAnnotation(newAnnotation)
+				reverseGeocodeReportLocation(selectWhenDone: true)
 				isEditing = true
 			}
 			else
@@ -43,11 +47,23 @@ class MainViewController: EditingViewController
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
 	{
+		let items = [
+			NSLocalizedString("MAP_TYPE_MAP", value: "Map", comment: "Map type segmented control: Map item. Should be very short."),
+			NSLocalizedString("MAP_TYPE_SATELLITE", value: "Satellite", comment: "Map type segmented control: Satellite item. Should be very short.")
+		]
+		mapTypeSegmentedControl = UISegmentedControl(items: items)
+		mapTypeSegmentedControl.selectedSegmentIndex = 0
+		
+		
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 		
-		self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
-		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-		self.hidesBottomBarWhenPushed = false
+		title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		
+		mapTypeSegmentedControl.addTarget(self, action: #selector(mapTypeSelected), for: .valueChanged)
+		navigationItem.titleView = mapTypeSegmentedControl
+		
+		hidesBottomBarWhenPushed = false
 		
 		updateToolbarItems()
 	}
@@ -70,6 +86,11 @@ class MainViewController: EditingViewController
 		
 		mapView.delegate = self
 		mapView.autoPinEdgesToSuperviewEdges()
+	}
+	
+	@objc private func mapTypeSelected()
+	{
+		mapView.mapType = mapTypeSegmentedControl.selectedSegmentIndex == 1 ? .hybrid : .standard
 	}
 	
 	override func viewDidAppear(_ animated: Bool)
@@ -213,8 +234,7 @@ class MainViewController: EditingViewController
 		mapView.centerCoordinate = initialCoordinate
 		
 		let annotation = ReportAnnotation(report: Report(coordinate: initialCoordinate, image: image))
-		self.reportAnnotation = annotation
-		mapView.selectAnnotation(annotation, animated: true)
+		reportAnnotation = annotation
 	}
 	
 	@objc fileprivate func showReport()
@@ -234,6 +254,38 @@ class MainViewController: EditingViewController
 		self.reportAnnotation = nil
 		
 		let _ = self.navigationController?.popToRootViewController(animated: true)
+	}
+	
+	fileprivate func reverseGeocodeReportLocation(selectWhenDone: Bool)
+	{
+		guard let reportAnnotation = reportAnnotation else
+		{
+			return
+		}
+		
+		let report = reportAnnotation.report
+		let coordinate = report.coordinate
+		report.countryCode = nil
+		report.postalCode = nil
+		report.jurisdiction = nil
+		
+		if selectWhenDone
+		{
+			mapView.deselectAnnotation(reportAnnotation, animated: false)
+		}
+		
+		let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+		geocoder.reverseGeocodeLocation(location)
+		{
+			[weak self] (placemarks, error) in
+			
+			reportAnnotation.placemark = placemarks?.first
+			
+			if selectWhenDone
+			{
+				self?.mapView.selectAnnotation(reportAnnotation, animated: false)
+			}
+		}
 	}
 }
 
@@ -331,48 +383,15 @@ extension MainViewController: MKMapViewDelegate
 			showReport()
 		}
 	}
+	
+	func mapView(_ mapView: MKMapView, annotationView: MKAnnotationView, didChange newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState)
+	{
+		if newState == .ending
+		{
+			reverseGeocodeReportLocation(selectWhenDone: annotationView.isSelected)
+		}
+	}
 }
 
-private class ReportAnnotation: NSObject, MKAnnotation
-{
-	var report: Report
-	
-	init(report: Report)
-	{
-		self.report = report
-		super.init()
-	}
-	
-	var title: String?
-	{
-		if let title = report.title
-		{
-			return title
-		}
-		
-		let tagsString = report.tagsString()
-		if tagsString.characters.count > 0
-		{
-			return tagsString
-		}
-		
-		return NSLocalizedString("NEW_REPORT_ANNOTATION_TITLE", value: "New Report", comment: "Title for a map annotation for a new report when no title has been chosen yet. Should be short.")
-	}
-	
-	var coordinate: CLLocationCoordinate2D
-	{
-		get
-		{
-			return report.coordinate
-		}
-		set
-		{
-			report.coordinate = newValue
-		}
-	}
-	
-	var subtitle: String?
-	{
-		return NSLocalizedString("NEW_REPORT_PIN_SUBTITLE", value:"Drag to exact location", comment: "Subtitle for new report pins on the map. Should be short.")
-	}
-}
+
+

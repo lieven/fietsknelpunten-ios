@@ -19,6 +19,11 @@
 		CA5B1B061DDA832F00A738F4 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA5B1B011DDA832F00A738F4 /* LaunchScreen.strings */; };
 		CA5B1B071DDA832F00A738F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA5B1B031DDA832F00A738F4 /* Localizable.strings */; };
 		CA5B1B0A1DDA86D600A738F4 /* Fietsknelpunten.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5B1B091DDA86D600A738F4 /* Fietsknelpunten.swift */; };
+		CA8C59451DE8C65600ACF8F2 /* Jurisdiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C59441DE8C65600ACF8F2 /* Jurisdiction.swift */; };
+		CA8C59471DE8CF4C00ACF8F2 /* ReportJurisdictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C59461DE8CF4C00ACF8F2 /* ReportJurisdictionViewController.swift */; };
+		CA90394E1DECB48B00FE77EE /* API+Jurisdiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA90394D1DECB48B00FE77EE /* API+Jurisdiction.swift */; };
+		CA9039511DECBF0800FE77EE /* CLPlacemark+FormattedAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9039501DECBF0800FE77EE /* CLPlacemark+FormattedAddress.swift */; };
+		CA9039531DECBF8300FE77EE /* ReportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9039521DECBF8300FE77EE /* ReportAnnotation.swift */; };
 		CABE90E81DD89B9A00746CF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABE90E71DD89B9A00746CF9 /* MapKit.framework */; };
 		CABEBB971DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */; };
 		CABEBBA01DD74C47007870AD /* FietsknelpuntenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +40,7 @@
 		CABEBBC01DD7EB97007870AD /* Dictionary+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */; };
 		CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */; };
 		CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEBBC31DD7F51C007870AD /* TextViewCell.swift */; };
+		CAC0EB321DE1CE4E005BDA8B /* API+BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0EB311DE1CE4E005BDA8B /* API+BoundingBox.swift */; };
 		CAE97BEE1DDA4AA6007D00C0 /* TintedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */; };
 		CAE97BF01DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */; };
 		CAE97BF31DDA73EE007D00C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE97BF51DDA73EE007D00C0 /* InfoPlist.strings */; };
@@ -87,7 +93,7 @@
 		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingNavigationController.swift; sourceTree = "<group>"; };
 		CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = App/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		CA4FDC141DD5C28F00F7BF9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA4FDC151DD5C28F00F7BF9F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,11 @@
 		CA5B1B041DDA832F00A738F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA5B1B081DDA839A00A738F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CA5B1B091DDA86D600A738F4 /* Fietsknelpunten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fietsknelpunten.swift; sourceTree = "<group>"; };
+		CA8C59441DE8C65600ACF8F2 /* Jurisdiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jurisdiction.swift; sourceTree = "<group>"; };
+		CA8C59461DE8CF4C00ACF8F2 /* ReportJurisdictionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportJurisdictionViewController.swift; sourceTree = "<group>"; };
+		CA90394D1DECB48B00FE77EE /* API+Jurisdiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+Jurisdiction.swift"; sourceTree = "<group>"; };
+		CA9039501DECBF0800FE77EE /* CLPlacemark+FormattedAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+FormattedAddress.swift"; sourceTree = "<group>"; };
+		CA9039521DECBF8300FE77EE /* ReportAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportAnnotation.swift; sourceTree = "<group>"; };
 		CABE90E71DD89B9A00746CF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CABEBB8E1DD74C46007870AD /* FietsknelpuntenAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FietsknelpuntenAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FietsknelpuntenAPI.h; sourceTree = "<group>"; };
@@ -114,6 +125,7 @@
 		CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Conversion.swift"; sourceTree = "<group>"; };
 		CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTagsViewController.swift; sourceTree = "<group>"; };
 		CABEBBC31DD7F51C007870AD /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
+		CAC0EB311DE1CE4E005BDA8B /* API+BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+BoundingBox.swift"; sourceTree = "<group>"; };
 		CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedButton.swift; sourceTree = "<group>"; };
 		CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PhotosAuthorization.swift"; sourceTree = "<group>"; };
 		CAE97BF41DDA73EE007D00C0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -196,11 +208,10 @@
 			children = (
 				CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */,
 				CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */,
-				CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */,
+				CA90394F1DECBEF000FE77EE /* Extensions */,
+				CA9039541DECBFA500FE77EE /* Main */,
 				CA4FDC1C1DD5CEBC00F7BF9F /* Report */,
 				CA4FDC0F1DD5C28F00F7BF9F /* Resources */,
-				CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */,
-				CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -222,28 +233,59 @@
 			isa = PBXGroup;
 			children = (
 				CABEBBBB1DD7EAEF007870AD /* Report.swift */,
+				CA9039551DECC05F00FE77EE /* UI */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		CA90394F1DECBEF000FE77EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA9039501DECBF0800FE77EE /* CLPlacemark+FormattedAddress.swift */,
+				CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */,
+				CAE97BEF1DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA9039541DECBFA500FE77EE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CA4FDC0E1DD5C28F00F7BF9F /* MainViewController.swift */,
+				CA9039521DECBF8300FE77EE /* ReportAnnotation.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CA9039551DECC05F00FE77EE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA8C59461DE8CF4C00ACF8F2 /* ReportJurisdictionViewController.swift */,
 				CA4FDC1D1DD5CF2900F7BF9F /* ReportProblemViewController.swift */,
 				CABEBBC11DD7EC3F007870AD /* ReportTagsViewController.swift */,
 				CABEBBB91DD7EA55007870AD /* TextFieldCell.swift */,
 				CABEBBC31DD7F51C007870AD /* TextViewCell.swift */,
 				CAE97BED1DDA4AA6007D00C0 /* TintedButton.swift */,
 			);
-			path = Report;
+			name = UI;
 			sourceTree = "<group>";
 		};
 		CABEBB8F1DD74C46007870AD /* FietsknelpuntenAPI */ = {
 			isa = PBXGroup;
 			children = (
-				CAE97BFA1DDA73EF007D00C0 /* InfoPlist.strings */,
 				CABEBBAC1DD74CFA007870AD /* API.swift */,
+				CAC0EB311DE1CE4E005BDA8B /* API+BoundingBox.swift */,
+				CA90394D1DECB48B00FE77EE /* API+Jurisdiction.swift */,
 				CABEBBB71DD7A961007870AD /* API+Tags.swift */,
-				CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */,
-				CABEBB911DD74C46007870AD /* Info.plist */,
-				CABEBBB51DD7A8E8007870AD /* Tag.swift */,
-				CABEBBB31DD7A849007870AD /* TagGroup.swift */,
 				CABEBBBD1DD7EB48007870AD /* Array+Safe.swift */,
 				CABEBBBF1DD7EB97007870AD /* Dictionary+Conversion.swift */,
 				CA5B1B091DDA86D600A738F4 /* Fietsknelpunten.swift */,
+				CABEBB901DD74C46007870AD /* FietsknelpuntenAPI.h */,
+				CABEBB911DD74C46007870AD /* Info.plist */,
+				CAE97BFA1DDA73EF007D00C0 /* InfoPlist.strings */,
+				CA8C59441DE8C65600ACF8F2 /* Jurisdiction.swift */,
+				CABEBBB51DD7A8E8007870AD /* Tag.swift */,
+				CABEBBB31DD7A849007870AD /* TagGroup.swift */,
 			);
 			path = FietsknelpuntenAPI;
 			sourceTree = "<group>";
@@ -470,13 +512,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9039531DECBF8300FE77EE /* ReportAnnotation.swift in Sources */,
 				CA4FDC1E1DD5CF2900F7BF9F /* ReportProblemViewController.swift in Sources */,
+				CA9039511DECBF0800FE77EE /* CLPlacemark+FormattedAddress.swift in Sources */,
 				CAE97BF01DDA6614007D00C0 /* UIViewController+PhotosAuthorization.swift in Sources */,
 				CABEBBC21DD7EC3F007870AD /* ReportTagsViewController.swift in Sources */,
 				CABEBBBC1DD7EAEF007870AD /* Report.swift in Sources */,
 				CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */,
 				CA172C4A1DD8666A008E7A70 /* EditingNavigationController.swift in Sources */,
 				CAE97BEE1DDA4AA6007D00C0 /* TintedButton.swift in Sources */,
+				CA8C59471DE8CF4C00ACF8F2 /* ReportJurisdictionViewController.swift in Sources */,
 				CA4FDC171DD5C28F00F7BF9F /* MainViewController.swift in Sources */,
 				CABEBBBA1DD7EA55007870AD /* TextFieldCell.swift in Sources */,
 				CABEBBC41DD7F51C007870AD /* TextViewCell.swift in Sources */,
@@ -492,7 +537,10 @@
 				CABEBBB61DD7A8E8007870AD /* Tag.swift in Sources */,
 				CABEBBBE1DD7EB48007870AD /* Array+Safe.swift in Sources */,
 				CABEBBB81DD7A961007870AD /* API+Tags.swift in Sources */,
+				CA8C59451DE8C65600ACF8F2 /* Jurisdiction.swift in Sources */,
+				CAC0EB321DE1CE4E005BDA8B /* API+BoundingBox.swift in Sources */,
 				CABEBBB41DD7A849007870AD /* TagGroup.swift in Sources */,
+				CA90394E1DECB48B00FE77EE /* API+Jurisdiction.swift in Sources */,
 				CABEBBC01DD7EB97007870AD /* Dictionary+Conversion.swift in Sources */,
 				CABEBBAD1DD74CFA007870AD /* API.swift in Sources */,
 			);

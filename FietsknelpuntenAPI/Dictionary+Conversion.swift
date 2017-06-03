@@ -31,4 +31,25 @@ extension Dictionary
 			return defaultValue
 		}
 	}
+	
+	public func double(forKey key: Key, allowConversion: Bool = false, defaultValue: Double? = nil) -> Double?
+	{
+		guard let value = self[key] else
+		{
+			return defaultValue
+		}
+		
+		if let doubleValue = value as? Double
+		{
+			return doubleValue
+		}
+		else if let stringValue = value as? String
+		{
+			return Double(stringValue)
+		}
+		else
+		{
+			return defaultValue
+		}
+	}
 }

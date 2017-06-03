@@ -14,10 +14,13 @@ import UIKit
 class Report
 {
 	var coordinate: CLLocationCoordinate2D
+	var countryCode: String?
+	var postalCode: String?
 	
 	var title: String?
 	var info: String?
 	var tags = [Tag]()
+	var jurisdiction: Jurisdiction?
 	var images = [UIImage]()
 	
 	func tagsString() -> String
