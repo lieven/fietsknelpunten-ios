@@ -82,13 +82,23 @@ internal class API: NSObject
 			return
 		}
 		
+		let completionMain: (Bool, Any?, Error?)->() =
+		{
+			(success, response, error) in
+			
+			DispatchQueue.main.async
+			{
+				completion(success, response, error)
+			}
+		}
+		
 		let task = URLSession.shared.dataTask(with: request)
 		{
 			(data, response, error) in
 			
 			if let error = error
 			{
-				completion(false, nil, error)
+				completionMain(false, nil, error)
 			}
 			else if let httpResponse = response as? HTTPURLResponse, let data = data
 			{
@@ -96,7 +106,7 @@ internal class API: NSObject
 				
 				if statusCode < 200 || statusCode >= 300
 				{
-					completion(false, nil, HttpStatusCode(code: statusCode))
+					completionMain(false, nil, HttpStatusCode(code: statusCode))
 				}
 				else
 				{
@@ -106,23 +116,23 @@ internal class API: NSObject
 						
 						if let responseDict = parsedResponse as? [String: Any], let errorCode = responseDict["error"] as? Int
 						{
-							completion(false, responseDict, ServerError(code: errorCode, userInfo: responseDict))
+							completionMain(false, responseDict, ServerError(code: errorCode, userInfo: responseDict))
 						}
 						else
 						{
-							completion(true, parsedResponse, nil)
+							completionMain(true, parsedResponse, nil)
 						}
 					}
 					catch (_)
 					{
-						completion(false, nil, ClientError.parseError)
+						completionMain(false, nil, ClientError.parseError)
 						return
 					}
 				}
 			}
 			else
 			{
-				completion(false, nil, ClientError.noResponse)
+				completionMain(false, nil, ClientError.noResponse)
 			}
 		}
 		
@@ -157,7 +167,7 @@ internal class API: NSObject
 		}
 		
 		var result = URLRequest(url: url)
-		result.setValue(self.appID, forHTTPHeaderField: "X_FIETSKNELPUNTEN_APPID")
+		result.setValue(self.appID, forHTTPHeaderField: "X-FIETSKNELPUNTEN-APPID")
 		
 		return result
 	}
