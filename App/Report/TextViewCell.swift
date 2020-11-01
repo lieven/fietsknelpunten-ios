@@ -45,7 +45,7 @@ class TextViewCell: UITableViewCell
 		placeholderLabel.autoPinEdges(toSuperviewMarginsExcludingEdge: .bottom)
 		placeholderLabel.autoSetDimension(.height, toSize: font.lineHeight)
 		
-		NotificationCenter.default.addObserver(self, selector: #selector(textViewTextDidChange), name: .UITextViewTextDidChange, object: textView)
+		NotificationCenter.default.addObserver(self, selector: #selector(textViewTextDidChange(_:)), name: .UITextViewTextDidChange, object: textView)
 	}
 	
 	required init?(coder aDecoder: NSCoder)
@@ -86,14 +86,14 @@ class TextViewCell: UITableViewCell
 		}
 	}
 	
-	func textViewTextDidChange(_ notification: Notification)
+	@objc func textViewTextDidChange(_ notification: Notification)
 	{
 		updatePlaceholderVisibility()
 	}
 	
 	func updatePlaceholderVisibility()
 	{
-		if let length = textView.text?.characters.count, length > 0
+		if let length = textView.text?.count, length > 0
 		{
 			placeholderLabel.isHidden = true
 		}

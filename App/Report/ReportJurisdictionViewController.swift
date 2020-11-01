@@ -45,7 +45,7 @@ class ReportJurisdictionViewController: UITableViewController
 			return jurisdictions
 		}
 		
-		if selectedType.characters.count > 0
+		if selectedType.count > 0
 		{
 			return jurisdictions.filter { $0.types?.contains(selectedType) ?? false }
 		}

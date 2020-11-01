@@ -34,7 +34,7 @@ class TextFieldCell: UITableViewCell
 		textField.autoPinEdge(toSuperviewMargin: .trailing, relation: .equal)
 		textField.autoAlignAxis(toSuperviewAxis: .horizontal)
 		
-		NSLayoutConstraint.autoSetPriority(UILayoutPriorityDefaultHigh)
+		NSLayoutConstraint.autoSetPriority(.defaultHigh)
 		{
 			[weak label] in
 			label?.autoSetContentHuggingPriority(for: .horizontal)

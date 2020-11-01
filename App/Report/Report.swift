@@ -26,7 +26,7 @@ class Report
 	func tagsString() -> String
 	{
 		return self.tags.reduce("") {
-			$0.characters.count > 0 ? "\($0), \($1.name)" : $1.name
+			$0.count > 0 ? "\($0), \($1.name)" : $1.name
 		}
 	}
 	

@@ -66,7 +66,7 @@ class EditingNavigationController: UINavigationController
 			updateEditingTintColors()
 			
 			let titleTextColor = self.tintColor ?? UIColor.black
-			self.titleTextAttributes = [NSForegroundColorAttributeName: titleTextColor]
+			self.titleTextAttributes = [.foregroundColor: titleTextColor]
 		}
 	}
 	

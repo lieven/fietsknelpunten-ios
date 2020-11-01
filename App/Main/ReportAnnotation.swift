@@ -29,7 +29,7 @@ class ReportAnnotation: NSObject, MKAnnotation
 		}
 		
 		let tagsString = report.tagsString()
-		if tagsString.characters.count > 0
+		if tagsString.count > 0
 		{
 			return tagsString
 		}
