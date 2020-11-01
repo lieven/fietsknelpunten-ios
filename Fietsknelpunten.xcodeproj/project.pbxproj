@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF6E9E85DBCE64919937A1E /* Pods_App.framework */; };
+		ABFF6838254F0AA20054CD9F /* PureLayout in Frameworks */ = {isa = PBXBuildFile; productRef = ABFF6837254F0AA20054CD9F /* PureLayout */; };
+		ABFF683D254F0AC70054CD9F /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = ABFF683C254F0AC70054CD9F /* FMDB */; };
 		CA1233811DD8BF020092A525 /* UIViewController+LocationAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */; };
 		CA172C4A1DD8666A008E7A70 /* EditingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */; };
 		CA4FDC161DD5C28F00F7BF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC0C1DD5C28F00F7BF9F /* AppDelegate.swift */; };
@@ -86,9 +87,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		7FF6E9E85DBCE64919937A1E /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1233801DD8BF020092A525 /* UIViewController+LocationAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LocationAuthorization.swift"; sourceTree = "<group>"; };
 		CA1505E11A80115400058046 /* Fietsknelpunten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fietsknelpunten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA172C491DD8666A008E7A70 /* EditingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingNavigationController.swift; sourceTree = "<group>"; };
@@ -139,7 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E1ED863D1AE6299829F698 /* Pods_App.framework in Frameworks */,
+				ABFF683D254F0AC70054CD9F /* FMDB in Frameworks */,
+				ABFF6838254F0AA20054CD9F /* PureLayout in Frameworks */,
 				CABE90E81DD89B9A00746CF9 /* MapKit.framework in Frameworks */,
 				CABEBBA31DD74C47007870AD /* FietsknelpuntenAPI.framework in Frameworks */,
 			);
@@ -172,15 +172,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8A4690D293CA8B584418F913 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */,
-				523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CA1505D81A80115300058046 = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +179,6 @@
 				CABEBB8F1DD74C46007870AD /* FietsknelpuntenAPI */,
 				CABEBB9C1DD74C47007870AD /* FietsknelpuntenAPITests */,
 				CA1505E21A80115400058046 /* Products */,
-				8A4690D293CA8B584418F913 /* Pods */,
 				5A84A4567A84FC4CAFC0C232 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -319,12 +309,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA1506041A80115400058046 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
-				3EC0D0959E80DFDF42EF272D /* [CP] Check Pods Manifest.lock */,
 				CA1505DD1A80115400058046 /* Sources */,
 				CA1505DE1A80115400058046 /* Frameworks */,
 				CA1505DF1A80115400058046 /* Resources */,
-				F881F2A7C88D0233C2065FF9 /* [CP] Embed Pods Frameworks */,
-				539F7AD207BF2728E2EE5A92 /* [CP] Copy Pods Resources */,
 				CABEBBAA1DD74C47007870AD /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -333,6 +320,10 @@
 				CABEBBA21DD74C47007870AD /* PBXTargetDependency */,
 			);
 			name = App;
+			packageProductDependencies = (
+				ABFF6837254F0AA20054CD9F /* PureLayout */,
+				ABFF683C254F0AC70054CD9F /* FMDB */,
+			);
 			productName = Fietsknelpunten;
 			productReference = CA1505E11A80115400058046 /* Fietsknelpunten.app */;
 			productType = "com.apple.product-type.application";
@@ -417,6 +408,10 @@
 				nl,
 			);
 			mainGroup = CA1505D81A80115300058046;
+			packageReferences = (
+				ABFF6836254F0AA20054CD9F /* XCRemoteSwiftPackageReference "PureLayout" */,
+				ABFF683B254F0AC70054CD9F /* XCRemoteSwiftPackageReference "fmdb" */,
+			);
 			productRefGroup = CA1505E21A80115400058046 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -458,54 +453,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3EC0D0959E80DFDF42EF272D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		539F7AD207BF2728E2EE5A92 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App/Pods-App-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F881F2A7C88D0233C2065FF9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App/Pods-App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA1505DD1A80115400058046 /* Sources */ = {
@@ -737,7 +684,6 @@
 		};
 		CA1506051A80115400058046 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0C6660004CC7CA00BDBCF8E /* Pods-App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -745,7 +691,10 @@
 				DEVELOPMENT_TEAM = CWWS67CQ58;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "be.fietsknelpunten.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Fietsknelpunten;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -755,7 +704,6 @@
 		};
 		CA1506061A80115400058046 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 523EB31B7A9C690DBDAE81EA /* Pods-App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -763,7 +711,10 @@
 				DEVELOPMENT_TEAM = CWWS67CQ58;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "be.fietsknelpunten.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Fietsknelpunten;
 				SWIFT_VERSION = 5.0;
@@ -790,7 +741,11 @@
 				INFOPLIST_FILE = FietsknelpuntenAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -823,11 +778,16 @@
 				INFOPLIST_FILE = FietsknelpuntenAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -849,7 +809,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = FietsknelpuntenAPI/Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -873,10 +837,15 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = FietsknelpuntenAPI/Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.fietsknelpunten.FietsknelpuntenAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fietsknelpunten.app/Fietsknelpunten";
 			};
@@ -922,6 +891,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABFF6836254F0AA20054CD9F /* XCRemoteSwiftPackageReference "PureLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PureLayout/PureLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.6;
+			};
+		};
+		ABFF683B254F0AC70054CD9F /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABFF6837254F0AA20054CD9F /* PureLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABFF6836254F0AA20054CD9F /* XCRemoteSwiftPackageReference "PureLayout" */;
+			productName = PureLayout;
+		};
+		ABFF683C254F0AC70054CD9F /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABFF683B254F0AC70054CD9F /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA1505D91A80115300058046 /* Project object */;
 }
