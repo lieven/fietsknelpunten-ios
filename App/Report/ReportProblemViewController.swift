@@ -102,11 +102,11 @@ class ReportProblemViewController: UITableViewController
 			return
 		}
 		
-		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 44.0
 		tableView.register(TextFieldCell.self, forCellReuseIdentifier: TextFieldCell.reuseIdentifier)
 		tableView.register(TextViewCell.self, forCellReuseIdentifier: TextViewCell.reuseIdentifier)
-		tableView.sectionFooterHeight = UITableViewAutomaticDimension
+		tableView.sectionFooterHeight = UITableView.automaticDimension
 		tableView.estimatedSectionFooterHeight = 100.0
 	}
 	

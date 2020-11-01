@@ -113,7 +113,7 @@ class EditingNavigationController: UINavigationController
 		return self.editingStyle ? .lightContent : .default
 	}
 	
-	override var childViewControllerForStatusBarStyle: UIViewController?
+	override var childForStatusBarStyle: UIViewController?
 	{
 		return nil
 	}

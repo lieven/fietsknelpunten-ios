@@ -17,7 +17,7 @@ class TextViewCell: UITableViewCell
 	let placeholderLabel = UILabel.newAutoLayout()
 	var textViewHeightConstraint: NSLayoutConstraint?
 	
-	override init(style: UITableViewCellStyle, reuseIdentifier: String?)
+	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
 	{
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
@@ -45,7 +45,7 @@ class TextViewCell: UITableViewCell
 		placeholderLabel.autoPinEdges(toSuperviewMarginsExcludingEdge: .bottom)
 		placeholderLabel.autoSetDimension(.height, toSize: font.lineHeight)
 		
-		NotificationCenter.default.addObserver(self, selector: #selector(textViewTextDidChange(_:)), name: .UITextViewTextDidChange, object: textView)
+		NotificationCenter.default.addObserver(self, selector: #selector(textViewTextDidChange(_:)), name: UITextView.textDidChangeNotification, object: textView)
 	}
 	
 	required init?(coder aDecoder: NSCoder)

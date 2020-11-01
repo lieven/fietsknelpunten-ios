@@ -204,7 +204,7 @@ class MainViewController: EditingViewController
 		present(actionSheet, animated: true, completion: nil)
 	}
 	
-	private func reportProblemUsingImagePicker(sourceType: UIImagePickerControllerSourceType)
+	private func reportProblemUsingImagePicker(sourceType: UIImagePickerController.SourceType)
 	{
 		let imagePicker = UIImagePickerController()
 		imagePicker.sourceType = sourceType
@@ -291,9 +291,9 @@ class MainViewController: EditingViewController
 
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
-	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
 	{
-		guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else
+		guard let image = info[.originalImage] as? UIImage else
 		{
 			print("Should not happen: No image")
 			dismiss(animated: true, completion: nil)
@@ -309,7 +309,7 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
 				self?.startNewReport(image: image, coordinate: nil)
 			}
 			
-			guard let assetURL = info[UIImagePickerControllerReferenceURL] as? URL else
+			guard let assetURL = info[.referenceURL] as? URL else
 			{
 				continueWithoutLocation()
 				return
@@ -384,7 +384,7 @@ extension MainViewController: MKMapViewDelegate
 		}
 	}
 	
-	func mapView(_ mapView: MKMapView, annotationView: MKAnnotationView, didChange newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState)
+	func mapView(_ mapView: MKMapView, annotationView: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState)
 	{
 		if newState == .ending
 		{

@@ -17,7 +17,7 @@ class TextFieldCell: UITableViewCell
 	let label = UILabel.newAutoLayout()
 	let textField = UITextField.newAutoLayout()
 	
-	override init(style: UITableViewCellStyle, reuseIdentifier: String?)
+	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
 	{
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		

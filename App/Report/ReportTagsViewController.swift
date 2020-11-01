@@ -82,7 +82,7 @@ class ReportTagsViewController: UITableViewController
 	{
 		if let tag = tagGroups[safe: indexPath.section]?.tags[safe: indexPath.row]
 		{
-			if let index = self.report.tags.index(of: tag)
+			if let index = self.report.tags.firstIndex(of: tag)
 			{
 				self.report.tags.remove(at: index)
 			}
